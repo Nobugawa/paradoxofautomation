@@ -1,0 +1,7 @@
+[[edge_functions]]
+function = "knowledge-graph-auth"
+path = "/knowledge-graph"
+
+[[edge_functions]]
+function = "knowledge-graph-auth"
+path = "/knowledge-graph/*"

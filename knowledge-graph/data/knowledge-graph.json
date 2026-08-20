@@ -1,0 +1,700 @@
+{
+  "version": "V1.1",
+  "updated": "August 20, 2026",
+  "nodeCount": 56,
+  "nodes": [
+    {
+      "id": "POA-001",
+      "title": "What Is Technology?",
+      "type": "Concept",
+      "status": "Pillar",
+      "summary": "Technology is a means to do something faster, cheaper, stronger, safer, or more effectively; AI belongs in a continuum from the wheel and printing press to modern automation.",
+      "related": [
+        "POA-002",
+        "POA-003",
+        "POA-010"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-002",
+      "title": "AI Is Not the Problem",
+      "type": "Concept",
+      "status": "Published/Pillar",
+      "summary": "AI is not inherently evil; purpose, proportion, sequencing, and downstream consequences matter.",
+      "related": [
+        "POA-001",
+        "POA-010",
+        "POA-013"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-003",
+      "title": "Paradox of Automation",
+      "type": "Core Thesis",
+      "status": "Pillar",
+      "summary": "Individually rational automation can become collectively destructive when labor-income elimination undermines aggregate demand and firms' own markets.",
+      "related": [
+        "POA-004",
+        "POA-006",
+        "POA-007",
+        "POA-008",
+        "POA-014",
+        "POA-015"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-004",
+      "title": "Missing First Rung",
+      "type": "Concept",
+      "status": "Pillar",
+      "summary": "Reduced hiring of entry-level workers can damage the labor pipeline even before mass layoffs appear.",
+      "related": [
+        "POA-003",
+        "POA-011",
+        "POA-016"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-005",
+      "title": "Cognitive vs Physical Automation",
+      "type": "Concept",
+      "status": "Pillar",
+      "summary": "Information jobs are easier to automate first; dexterous, site-specific physical work requires more engineering and generally comes later.",
+      "related": [
+        "POA-003",
+        "POA-012",
+        "POA-017"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-006",
+      "title": "100-Person Island",
+      "type": "Thought Experiment",
+      "status": "Pillar",
+      "summary": "One robot owner replaces 99 workers. Productive capacity explodes while purchasing power disappears.",
+      "related": [
+        "POA-003",
+        "POA-007",
+        "POA-008",
+        "POA-018"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-007",
+      "title": "Valley Before Abundance",
+      "type": "Concept",
+      "status": "Pillar",
+      "summary": "Even if AI eventually creates abundance, the transition may include unemployment, demand collapse, asset stress, unrest, and political instability.",
+      "related": [
+        "POA-003",
+        "POA-006",
+        "POA-008",
+        "POA-019"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-008",
+      "title": "Money, Scarcity & Allocation",
+      "type": "Concept",
+      "status": "Pillar",
+      "summary": "Zero economic profit is not zero price. Scarce goods still require an allocation mechanism.",
+      "related": [
+        "POA-006",
+        "POA-007",
+        "POA-020"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-009",
+      "title": "Nature, Overshoot & Equilibrium",
+      "type": "Concept",
+      "status": "Pillar",
+      "summary": "Nature rebalances overshoot ruthlessly; AI/economic systems may self-correct similarly unless humans design gentler feedback mechanisms.",
+      "related": [
+        "POA-003",
+        "POA-010",
+        "POA-021"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-010",
+      "title": "Ethical AI Transition",
+      "type": "Concept",
+      "status": "Pillar",
+      "summary": "Fairness, speed, warning, support, and sequencing matter. Progress should not ambush people who have no realistic time to adapt.",
+      "related": [
+        "POA-002",
+        "POA-009",
+        "POA-022",
+        "SOL-001",
+        "SOL-002",
+        "SOL-003"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-011",
+      "title": "AI Layoffs & Hiring Evidence",
+      "type": "Research Theme",
+      "status": "Active",
+      "summary": "Track layoffs, reduced hiring, entry-level exposure, occupation changes, and employer disclosures tied to AI.",
+      "related": [
+        "POA-003",
+        "POA-004",
+        "RES-001",
+        "RES-002"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-012",
+      "title": "Autonomous Robotics",
+      "type": "Research Theme",
+      "status": "Active",
+      "summary": "Track controlled-environment robotics first, then less structured physical work.",
+      "related": [
+        "POA-005",
+        "POA-017",
+        "RES-003"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-013",
+      "title": "Automation of Danger vs Livelihood",
+      "type": "Ethical Distinction",
+      "status": "Core",
+      "summary": "Automating danger can protect humans; automating livelihoods changes the income-and-demand system.",
+      "related": [
+        "POA-002",
+        "POA-010"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-014",
+      "title": "Paradox of Thrift Analogy",
+      "type": "Economic Analogy",
+      "status": "Supporting",
+      "summary": "What is rational for one actor can be destructive when everyone does it.",
+      "related": [
+        "POA-003",
+        "POA-015",
+        "POA-023"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-015",
+      "title": "Race to Automate / Tragedy of Commons",
+      "type": "Economic Analogy",
+      "status": "Supporting",
+      "summary": "Firms may automate because competitors will; no conspiracy is required for collectively destructive outcomes.",
+      "related": [
+        "POA-003",
+        "POA-014",
+        "POA-024"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-016",
+      "title": "Expertise Pipeline Problem",
+      "type": "Concept",
+      "status": "Supporting",
+      "summary": "If junior roles disappear, future senior professionals may never accumulate the experience organizations still need.",
+      "related": [
+        "POA-004",
+        "POA-011"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-017",
+      "title": "Controlled Environments First",
+      "type": "Concept",
+      "status": "Supporting",
+      "summary": "Physical automation can arrive sooner when environments are constrained or redesigned around machines.",
+      "related": [
+        "POA-005",
+        "POA-012"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-018",
+      "title": "Claim on Production",
+      "type": "Economic Question",
+      "status": "Core",
+      "summary": "If labor no longer determines income, what gives humans a legitimate claim on machine-produced goods and services?",
+      "related": [
+        "POA-003",
+        "POA-006",
+        "POA-008",
+        "SOL-001"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-019",
+      "title": "Social Instability / Revolution Risk",
+      "type": "Societal Risk",
+      "status": "Supporting",
+      "summary": "Rapid unemployment, inequality, and collapsing expectations can create unrest or revolutionary pressure.",
+      "related": [
+        "POA-007",
+        "POA-022",
+        "POA-025"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-020",
+      "title": "Abundance Is Not Infinite Supply",
+      "type": "Economic Concept",
+      "status": "Supporting",
+      "summary": "Land, energy, materials, desirable locations, time, and unique experiences remain scarce even in high-productivity worlds.",
+      "related": [
+        "POA-008",
+        "POA-026"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-021",
+      "title": "Mouse Plague Analogy",
+      "type": "Nature Analogy",
+      "status": "Supporting",
+      "summary": "Population/resource overshoot illustrates brutal self-correction when feedback is ignored.",
+      "related": [
+        "POA-009"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-022",
+      "title": "Speed & Fairness",
+      "type": "Ethical Concept",
+      "status": "Core",
+      "summary": "AI disruption can blindside ordinary people before they understand what is happening or have time to retrain.",
+      "related": [
+        "POA-010",
+        "POA-019",
+        "POA-027"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-023",
+      "title": "Gold Rush / Tulip Bubble Analogy",
+      "type": "Market Analogy",
+      "status": "Supporting",
+      "summary": "Competitive frenzy and fear of missing extraordinary returns can drive capital and behavior to extremes.",
+      "related": [
+        "POA-014",
+        "POA-015",
+        "POA-028"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-024",
+      "title": "Oil Extraction Race",
+      "type": "Market Analogy",
+      "status": "Supporting",
+      "summary": "Individually rational extraction can create collective oversupply; used as an analogy for automation races.",
+      "related": [
+        "POA-015"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-025",
+      "title": "Luddite / Industrial Transition History",
+      "type": "Historical Theme",
+      "status": "Supporting",
+      "summary": "Mechanization, worker resistance, state suppression, and long transition periods provide a contrast with today's faster AI disruption.",
+      "related": [
+        "POA-019",
+        "POA-022",
+        "ART-005"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-026",
+      "title": "Musk No-Money / Abundance Thesis",
+      "type": "Counterargument",
+      "status": "Active",
+      "summary": "Examine claims that AI makes work optional and money irrelevant; distinguish abundance from scarcity and zero economic profit from zero price.",
+      "related": [
+        "POA-007",
+        "POA-008",
+        "POA-020",
+        "ART-004"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-027",
+      "title": "Fossil Fuel Transition Comparison",
+      "type": "Historical/Policy Analogy",
+      "status": "Supporting",
+      "summary": "Fossil fuels had decades of warning and still have not fully transitioned; AI gives workers far less runway.",
+      "related": [
+        "POA-022",
+        "POA-029"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-028",
+      "title": "Capitalism Has No Brake Pedal",
+      "type": "Systemic Critique",
+      "status": "Supporting",
+      "summary": "Competitive capitalism rewards short-term cost reduction and market capture even when collective adoption may destabilize demand.",
+      "related": [
+        "POA-003",
+        "POA-015",
+        "POA-023",
+        "POA-030"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-029",
+      "title": "Government Capture / Follow the Money",
+      "type": "Policy Theme",
+      "status": "Supporting",
+      "summary": "Lobbying, subsidies, pay-to-play incentives, short-term politics, and weak foresight can obstruct transition planning.",
+      "related": [
+        "POA-027",
+        "POA-030",
+        "ART-006"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-030",
+      "title": "Government Failure / Need for Collective Adoption",
+      "type": "Policy Theme",
+      "status": "Core",
+      "summary": "One ethical firm cannot stabilize the economy alone; systemic problems require collective rules or shared mechanisms.",
+      "related": [
+        "POA-010",
+        "POA-028",
+        "POA-029",
+        "SOL-001",
+        "SOL-002"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-031",
+      "title": "Weak UBI Critique",
+      "type": "Policy Critique",
+      "status": "Core",
+      "summary": "Very low UBI levels such as $10k-$12k/year cannot support modern housing, healthcare, education, retirement, and middle-class consumption.",
+      "related": [
+        "POA-003",
+        "POA-007",
+        "SOL-001"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-032",
+      "title": "Post-Work Meaning & Identity",
+      "type": "Societal Theme",
+      "status": "Supporting",
+      "summary": "Work provides income, structure, identity, contribution, and purpose; mass displacement can create a meaning crisis.",
+      "related": [
+        "POA-007",
+        "POA-019"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-033",
+      "title": "AI Safety vs Economic Safety",
+      "type": "Framing",
+      "status": "Core",
+      "summary": "Traditional AI safety focuses on misuse/alignment; economic destabilization from job destruction deserves comparable attention.",
+      "related": [
+        "POA-003",
+        "POA-010",
+        "POA-034"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-034",
+      "title": "Autonomous Warfare",
+      "type": "Risk Theme",
+      "status": "Supporting",
+      "summary": "AI in warfare and life-and-death decision systems is a distinct nefarious use requiring strong ethical limits.",
+      "related": [
+        "POA-033"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-035",
+      "title": "Lifespan Extension & System Design",
+      "type": "Secondary Theme",
+      "status": "Supporting",
+      "summary": "Longer lifespans can stress pension, Social Security, healthcare, and retirement assumptions.",
+      "related": [
+        "POA-010"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-036",
+      "title": "Prevention vs Lifespan Extension",
+      "type": "Ethical Distinction",
+      "status": "Supporting",
+      "summary": "Preventing early death differs systemically from broadly extending lifespan.",
+      "related": [
+        "POA-035"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-037",
+      "title": "Ethical Use Cases for AI",
+      "type": "Positive Agenda",
+      "status": "Core",
+      "summary": "Use AI for materials, recycling, climate, dangerous environments, firefighting, nuclear accidents, and pandemic prevention.",
+      "related": [
+        "POA-002",
+        "POA-010"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-038",
+      "title": "Economic Profit Tends Toward Zero",
+      "type": "Economic Principle",
+      "status": "Supporting",
+      "summary": "Competitive markets tend to erode supernormal economic profits; this does not imply zero prices or zero production costs.",
+      "related": [
+        "POA-008",
+        "POA-026"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-039",
+      "title": "Capital-Labor-IP Triangle",
+      "type": "Economic Framework",
+      "status": "Supporting",
+      "summary": "AI may substitute for labor and portions of IP/knowledge, concentrating power in capital owners.",
+      "related": [
+        "POA-003",
+        "POA-028"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-040",
+      "title": "Production Without Consumption",
+      "type": "Core Phrase",
+      "status": "Core",
+      "summary": "High productive capacity with insufficient labor income creates goods without enough purchasing power to consume them.",
+      "related": [
+        "POA-003",
+        "POA-006",
+        "POA-018"
+      ],
+      "group": "Concepts"
+    },
+    {
+      "id": "ART-001",
+      "title": "AI Is Not the Problem. What We Choose to Do With It Is.",
+      "type": "Article",
+      "status": "Drafted",
+      "summary": "Main nodes: POA-002, POA-013, POA-037",
+      "related": [
+        "POA-002",
+        "POA-013",
+        "POA-037"
+      ],
+      "group": "Articles"
+    },
+    {
+      "id": "ART-002",
+      "title": "The Paradox of Automation",
+      "type": "Article",
+      "status": "Planned",
+      "summary": "Main nodes: POA-003, POA-014, POA-040",
+      "related": [
+        "POA-003",
+        "POA-014",
+        "POA-040"
+      ],
+      "group": "Articles"
+    },
+    {
+      "id": "ART-003",
+      "title": "The Missing First Rung",
+      "type": "Article",
+      "status": "Planned",
+      "summary": "Main nodes: POA-004, POA-016, RES-001",
+      "related": [
+        "POA-004",
+        "POA-016",
+        "RES-001"
+      ],
+      "group": "Articles"
+    },
+    {
+      "id": "ART-004",
+      "title": "The Valley Before Abundance",
+      "type": "Article",
+      "status": "Planned",
+      "summary": "Main nodes: POA-007, POA-008, POA-026",
+      "related": [
+        "POA-007",
+        "POA-008",
+        "POA-026"
+      ],
+      "group": "Articles"
+    },
+    {
+      "id": "ART-005",
+      "title": "AI Disruption: Speed, Fairness, and the Luddite Lesson",
+      "type": "Article",
+      "status": "Planned",
+      "summary": "Main nodes: POA-022, POA-025, POA-027",
+      "related": [
+        "POA-022",
+        "POA-025",
+        "POA-027"
+      ],
+      "group": "Articles"
+    },
+    {
+      "id": "ART-006",
+      "title": "In the Dark: Fossil Fuel Policy Disaster",
+      "type": "Article",
+      "status": "Separate series",
+      "summary": "Main nodes: POA-027, POA-029",
+      "related": [
+        "POA-027",
+        "POA-029"
+      ],
+      "group": "Articles"
+    },
+    {
+      "id": "RES-001",
+      "title": "Entry-Level AI Employment Evidence",
+      "type": "Research",
+      "status": "Active",
+      "summary": "Supports: POA-004, POA-011, ART-003",
+      "related": [
+        "POA-004",
+        "POA-011",
+        "ART-003"
+      ],
+      "group": "Research"
+    },
+    {
+      "id": "RES-002",
+      "title": "AI-Linked Layoff Tracker",
+      "type": "Research",
+      "status": "Active",
+      "summary": "Supports: POA-011, ART-002",
+      "related": [
+        "POA-011",
+        "ART-002"
+      ],
+      "group": "Research"
+    },
+    {
+      "id": "RES-003",
+      "title": "Physical Automation Tracker",
+      "type": "Research",
+      "status": "Active",
+      "summary": "Supports: POA-005, POA-012, POA-017",
+      "related": [
+        "POA-005",
+        "POA-012",
+        "POA-017"
+      ],
+      "group": "Research"
+    },
+    {
+      "id": "SOL-001",
+      "title": "AI/Automation Dividend or Income Continuity",
+      "type": "Solution",
+      "status": "Needs refinement",
+      "summary": "Preserve purchasing power when machines replace labor; must be framed as system stabilization rather than a trivial handout.",
+      "related": [],
+      "group": "Solutions"
+    },
+    {
+      "id": "SOL-002",
+      "title": "Managed Transition / Work Reduction",
+      "type": "Solution",
+      "status": "Needs refinement",
+      "summary": "Use productivity gains to reduce hours rather than abruptly eliminate people.",
+      "related": [],
+      "group": "Solutions"
+    },
+    {
+      "id": "SOL-003",
+      "title": "AI Impact / Systems Consequence Assessment",
+      "type": "Solution",
+      "status": "Needs refinement",
+      "summary": "Assess labor, demand, retirement, housing, tax-base, and social-stability effects before large-scale deployment.",
+      "related": [],
+      "group": "Solutions"
+    },
+    {
+      "id": "VIS-001",
+      "title": "Automation Collapse Loop",
+      "type": "Visual",
+      "status": "Planned",
+      "summary": "",
+      "related": [],
+      "group": "Visuals"
+    },
+    {
+      "id": "VIS-002",
+      "title": "100-Person Island Economy",
+      "type": "Visual",
+      "status": "Planned",
+      "summary": "",
+      "related": [],
+      "group": "Visuals"
+    },
+    {
+      "id": "VIS-003",
+      "title": "Cognitive-to-Physical Automation Timeline",
+      "type": "Visual",
+      "status": "Planned",
+      "summary": "",
+      "related": [],
+      "group": "Visuals"
+    },
+    {
+      "id": "VIS-004",
+      "title": "Valley Before Abundance",
+      "type": "Visual",
+      "status": "Planned",
+      "summary": "",
+      "related": [],
+      "group": "Visuals"
+    }
+  ]
+}
