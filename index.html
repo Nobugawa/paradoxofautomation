@@ -148,21 +148,6 @@
       font-family:Georgia, "Times New Roman", serif;
       font-size:clamp(1.55rem,3vw,2.25rem); line-height:1.3; font-weight:700;
     }
-    .question-stack{
-      margin:54px 0;
-      display:grid; gap:1px;
-      background:var(--ink); border:1px solid var(--ink);
-    }
-    .q{
-      background:var(--paper); padding:22px 24px;
-      display:grid; grid-template-columns:38px 1fr; gap:15px; align-items:start;
-    }
-    .q span{
-      width:28px; height:28px; background:var(--signal); color:white; border-radius:50%;
-      display:grid; place-items:center; font:800 .78rem/1 system-ui;
-    }
-    .q b{font-family:Georgia, "Times New Roman", serif; font-size:1.25rem}
-
     .danger-vs-livelihood{
       margin:56px auto 10px; width:min(calc(100% - 40px), 940px);
       border:1px solid var(--ink); display:grid; grid-template-columns:1fr 1fr;
@@ -198,7 +183,7 @@
       padding:17px 0; border-bottom:1px solid var(--line);
       display:flex; justify-content:space-between; gap:20px;
     }
-    .ending-list li:after{content:"?"; color:var(--signal); font-family:system-ui}
+    .ending-list li:after{content:"?"; color:var(--signal); font-family:system-ui; font-weight:800}
 
     .newsletter{
       background:var(--signal); color:#fff9ef; padding:70px 0;
@@ -234,7 +219,7 @@
       background:#0e0f11; color:#928c82; padding:25px 0;
       border-top:1px solid #2b2c2e; font-size:.76rem;
     }
-    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+    .foot{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center}
     .footer-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .footer-email{color:#c8c2b6;text-decoration:none}
     footer a{color:#c8c2b6}
@@ -250,9 +235,9 @@
       .hero{padding-top:52px}
       h1{font-size:clamp(3.2rem,14vw,5rem)}
       .hero:after{right:-245px}
-      .thesis-grid,.newsletter-grid,.about-grid{grid-template-columns:1fr;gap:22px}
+      .thesis-grid,.newsletter-grid,.about-grid{grid-template-columns:1fr; gap:22px}
       .danger-vs-livelihood{grid-template-columns:1fr}
-      .compare:first-child{border-right:0;border-bottom:1px solid var(--ink)}
+      .compare:first-child{border-right:0; border-bottom:1px solid var(--ink)}
       .form-row{flex-direction:column}
       button{width:100%}
       article p{font-size:1.14rem}
@@ -276,7 +261,7 @@
     "author":{"@type":"Person","name":"Philos Kim"},
     "publisher":{"@type":"Organization","name":"Paradox of Automation"},
     "datePublished":"2026-08-19",
-    "dateModified":"2026-08-23",
+    "dateModified":"2026-08-24",
     "mainEntityOfPage":"https://paradoxofautomation.com/",
     "description":"AI is not inherently good or evil. The question is what we automate, why we automate it, and whether we understand what comes next."
   }
@@ -287,7 +272,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="/" aria-label="Paradox of Automation home">
-        <img src="/poa-logo-header.png" alt="Paradox of Automation — The Human Equation" />
+        <img src="/media/poa-logo.png" alt="Paradox of Automation — The Human Equation" />
       </a>
       <nav aria-label="Primary">
         <a href="#article">Essay</a>
@@ -321,45 +306,25 @@
     <article id="article">
       <div class="reading">
         <p class="lead">Artificial intelligence is not evil.</p>
-
         <p>Neither is money. Neither is fire. Neither is water.</p>
-
         <p>In the right amount and used for the right purpose, water is essential to life. Too much of it becomes a flood. Fire can warm a home or destroy one. Money can help organize an economy or distort one.</p>
-
         <p><strong>AI is no different.</strong></p>
-
         <p>The question is not whether AI is good or bad.</p>
-
         <p>The question is what we choose to do with it.</p>
-
         <p>If AI can help us develop a material that performs better than plastic without leaving a trail of pollution behind, I am all for it.</p>
-
         <p>If it can help us actually recycle the materials we already produce instead of merely placing a recycling symbol on them, good.</p>
-
         <p>If AI can help us understand climate change, improve energy systems, prevent pandemics, send robots into burning buildings, contain a nuclear accident, fight a forest fire, or perform work that is simply too dangerous for a human being, those are extraordinary uses of technology.</p>
-
         <p>Those are examples of technology doing what technology should do: extending human capability and solving problems we have struggled to solve ourselves.</p>
-
         <div class="pulse">But that is not the only direction we are taking.</div>
-
         <p>We are also racing to answer a very different question:</p>
-
         <div class="pulse">How many people can we eliminate from the payroll?</div>
-
         <p>And we are pursuing that question before we have answered the one that should come first:</p>
-
         <div class="pulse">What happens afterward?</div>
-
         <p>What happens when millions of people no longer receive the income they once earned?</p>
-
         <p>What happens to housing when fewer people can afford mortgages or rent?</p>
-
         <p>What happens to healthcare, retirement savings, pensions, college tuition, tax revenues and consumer spending?</p>
-
         <p>What happens to an economy built around the idea that people earn income by working when increasingly sophisticated machines can perform both cognitive and physical work?</p>
-
         <p>These are not arguments against technology.</p>
-
         <p><strong>They are arguments for thinking before acting.</strong></p>
       </div>
 
@@ -378,39 +343,22 @@
 
       <div class="reading">
         <p>There is an important ethical distinction between automating danger and automating livelihood.</p>
-
         <p>Replacing a firefighter inside a collapsing building with a machine can save a life.</p>
-
         <p>Replacing an accountant, programmer, designer, attorney or eventually a plumber because a machine can perform the job more cheaply may improve a company's margins.</p>
-
         <p>But when that happens across an entire economy, the consequences do not stop at the company's income statement.</p>
-
         <p><strong>The worker is also a customer.</strong></p>
-
         <p>The worker pays a mortgage.</p>
-
         <p>The worker buys food, cars, clothing and services.</p>
-
         <p>The worker contributes taxes and retirement savings.</p>
-
         <p>The worker is part of the economic system that makes the company's profits possible in the first place.</p>
-
         <p>Technology has displaced labor throughout history. The printing press, sewing machine, assembly line, tractor and computer all changed the nature of work.</p>
-
         <p>But previous transitions generally unfolded slowly enough that society had some chance to adapt. Even highly disruptive machines often still required humans to operate them.</p>
-
         <p>AI potentially changes both sides of that equation.</p>
-
         <p>It can replace cognitive work directly through software, requiring no physical machine to arrive at the office at all.</p>
-
         <p>And as robotics improves, increasingly sophisticated physical work will follow.</p>
-
         <p>We appear determined to discover how much work can be automated before we have seriously decided what economic role humans should occupy afterward.</p>
-
         <p><strong>That seems backward.</strong></p>
-
         <p>If artificial intelligence is as transformative as its advocates say it is, then the responsibility surrounding its deployment should be equally transformative.</p>
-
         <p>The fact that we can automate something does not automatically mean that we should automate it immediately.</p>
       </div>
     </article>
@@ -434,9 +382,6 @@
           <h2>Follow the paradox.</h2>
           <p>Essays and evidence on AI, work, economics, and the transition we are already living through. No hype. No apocalypse theater. Just the questions we should have been asking sooner.</p>
         </div>
-
-        <!-- Netlify Forms: works automatically when deployed to Netlify.
-             If you deploy elsewhere, replace this form action with your email provider endpoint. -->
         <form name="subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
           <input type="hidden" name="form-name" value="subscribe" />
           <p hidden><label>Do not fill this out: <input name="bot-field" /></label></p>
@@ -467,6 +412,6 @@
       <span class="footer-links"><a href="/privacy.html">Privacy</a><span aria-hidden="true">·</span><a class="footer-email" href="mailto:hello@paradoxofautomation.com">hello@paradoxofautomation.com</a></span>
     </div>
   </footer>
-<div class="workflow-version">SITE V1.3</div>
+<div class="workflow-version">SITE V1.4</div>
 </body>
 </html>
