@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-labelledby="title desc">
+  <title id="title">Paradox of Automation — The Human Equation</title>
+  <desc id="desc">Editorial black and red Paradox of Automation logo.</desc>
+  <rect width="760" height="180" fill="#f4f0e7"/>
+  <g transform="translate(18 20)">
+    <path d="M96 15 A58 58 0 0 0 96 131" fill="none" stroke="#111214" stroke-width="12" stroke-linecap="round"/>
+    <path d="M97 22 A58 58 0 0 1 97 138" fill="none" stroke="#c8191e" stroke-width="12" stroke-linecap="round"/>
+    <line x1="97" y1="0" x2="97" y2="150" stroke="#111214" stroke-width="2.2"/>
+    <line x1="24" y1="137" x2="161" y2="14" stroke="#111214" stroke-width="2.2"/>
+    <circle cx="24" cy="137" r="5" fill="#111214"/>
+    <circle cx="161" cy="14" r="5" fill="#c8191e"/>
+    <path d="M47 72 C69 45 89 44 108 72" fill="none" stroke="#111214" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 8"/>
+    <path d="M87 80 C111 111 133 111 151 84" fill="none" stroke="#c8191e" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 8"/>
+  </g>
+  <g fill="#111214">
+    <text x="210" y="73" font-family="Georgia, 'Times New Roman', serif" font-size="59" letter-spacing="-2">Paradox</text>
+    <text x="210" y="127" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic">of</text>
+    <line x1="211" y1="135" x2="250" y2="135" stroke="#c8191e" stroke-width="3"/>
+    <text x="260" y="127" font-family="Georgia, 'Times New Roman', serif" font-size="53" letter-spacing="-1.5">Automation</text>
+    <text x="210" y="158" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="7">THE HUMAN </text>
+    <text x="375" y="158" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="7" fill="#c8191e">EQUATION</text>
+  </g>
+</svg>
