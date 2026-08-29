@@ -1,7 +1,7 @@
 {
-  "version": "V1.1",
-  "updated": "August 20, 2026",
-  "nodeCount": 56,
+  "version": "V1.2",
+  "updated": "August 28, 2026",
+  "nodeCount": 71,
   "nodes": [
     {
       "id": "POA-001",
@@ -9,11 +9,7 @@
       "type": "Concept",
       "status": "Pillar",
       "summary": "Technology is a means to do something faster, cheaper, stronger, safer, or more effectively; AI belongs in a continuum from the wheel and printing press to modern automation.",
-      "related": [
-        "POA-002",
-        "POA-003",
-        "POA-010"
-      ],
+      "related": ["POA-002", "POA-003", "POA-010"],
       "group": "Concepts"
     },
     {
@@ -22,11 +18,7 @@
       "type": "Concept",
       "status": "Published/Pillar",
       "summary": "AI is not inherently evil; purpose, proportion, sequencing, and downstream consequences matter.",
-      "related": [
-        "POA-001",
-        "POA-010",
-        "POA-013"
-      ],
+      "related": ["POA-001", "POA-010", "POA-013"],
       "group": "Concepts"
     },
     {
@@ -35,14 +27,7 @@
       "type": "Core Thesis",
       "status": "Pillar",
       "summary": "Individually rational automation can become collectively destructive when labor-income elimination undermines aggregate demand and firms' own markets.",
-      "related": [
-        "POA-004",
-        "POA-006",
-        "POA-007",
-        "POA-008",
-        "POA-014",
-        "POA-015"
-      ],
+      "related": ["POA-004", "POA-006", "POA-007", "POA-008", "POA-014", "POA-015"],
       "group": "Concepts"
     },
     {
@@ -51,11 +36,7 @@
       "type": "Concept",
       "status": "Pillar",
       "summary": "Reduced hiring of entry-level workers can damage the labor pipeline even before mass layoffs appear.",
-      "related": [
-        "POA-003",
-        "POA-011",
-        "POA-016"
-      ],
+      "related": ["POA-003", "POA-011", "POA-016"],
       "group": "Concepts"
     },
     {
@@ -64,11 +45,7 @@
       "type": "Concept",
       "status": "Pillar",
       "summary": "Information jobs are easier to automate first; dexterous, site-specific physical work requires more engineering and generally comes later.",
-      "related": [
-        "POA-003",
-        "POA-012",
-        "POA-017"
-      ],
+      "related": ["POA-003", "POA-012", "POA-017"],
       "group": "Concepts"
     },
     {
@@ -77,12 +54,7 @@
       "type": "Thought Experiment",
       "status": "Pillar",
       "summary": "One robot owner replaces 99 workers. Productive capacity explodes while purchasing power disappears.",
-      "related": [
-        "POA-003",
-        "POA-007",
-        "POA-008",
-        "POA-018"
-      ],
+      "related": ["POA-003", "POA-007", "POA-008", "POA-018"],
       "group": "Concepts"
     },
     {
@@ -91,12 +63,7 @@
       "type": "Concept",
       "status": "Pillar",
       "summary": "Even if AI eventually creates abundance, the transition may include unemployment, demand collapse, asset stress, unrest, and political instability.",
-      "related": [
-        "POA-003",
-        "POA-006",
-        "POA-008",
-        "POA-019"
-      ],
+      "related": ["POA-003", "POA-006", "POA-008", "POA-019"],
       "group": "Concepts"
     },
     {
@@ -105,11 +72,7 @@
       "type": "Concept",
       "status": "Pillar",
       "summary": "Zero economic profit is not zero price. Scarce goods still require an allocation mechanism.",
-      "related": [
-        "POA-006",
-        "POA-007",
-        "POA-020"
-      ],
+      "related": ["POA-006", "POA-007", "POA-020"],
       "group": "Concepts"
     },
     {
@@ -118,11 +81,7 @@
       "type": "Concept",
       "status": "Pillar",
       "summary": "Nature rebalances overshoot ruthlessly; AI/economic systems may self-correct similarly unless humans design gentler feedback mechanisms.",
-      "related": [
-        "POA-003",
-        "POA-010",
-        "POA-021"
-      ],
+      "related": ["POA-003", "POA-010", "POA-021"],
       "group": "Concepts"
     },
     {
@@ -131,14 +90,7 @@
       "type": "Concept",
       "status": "Pillar",
       "summary": "Fairness, speed, warning, support, and sequencing matter. Progress should not ambush people who have no realistic time to adapt.",
-      "related": [
-        "POA-002",
-        "POA-009",
-        "POA-022",
-        "SOL-001",
-        "SOL-002",
-        "SOL-003"
-      ],
+      "related": ["POA-002", "POA-009", "POA-022", "SOL-001", "SOL-002", "SOL-003"],
       "group": "Concepts"
     },
     {
@@ -147,12 +99,7 @@
       "type": "Research Theme",
       "status": "Active",
       "summary": "Track layoffs, reduced hiring, entry-level exposure, occupation changes, and employer disclosures tied to AI.",
-      "related": [
-        "POA-003",
-        "POA-004",
-        "RES-001",
-        "RES-002"
-      ],
+      "related": ["POA-003", "POA-004", "RES-001", "RES-002"],
       "group": "Concepts"
     },
     {
@@ -161,11 +108,7 @@
       "type": "Research Theme",
       "status": "Active",
       "summary": "Track controlled-environment robotics first, then less structured physical work.",
-      "related": [
-        "POA-005",
-        "POA-017",
-        "RES-003"
-      ],
+      "related": ["POA-005", "POA-017", "RES-003"],
       "group": "Concepts"
     },
     {
@@ -174,10 +117,7 @@
       "type": "Ethical Distinction",
       "status": "Core",
       "summary": "Automating danger can protect humans; automating livelihoods changes the income-and-demand system.",
-      "related": [
-        "POA-002",
-        "POA-010"
-      ],
+      "related": ["POA-002", "POA-010"],
       "group": "Concepts"
     },
     {
@@ -186,11 +126,7 @@
       "type": "Economic Analogy",
       "status": "Supporting",
       "summary": "What is rational for one actor can be destructive when everyone does it.",
-      "related": [
-        "POA-003",
-        "POA-015",
-        "POA-023"
-      ],
+      "related": ["POA-003", "POA-015", "POA-023"],
       "group": "Concepts"
     },
     {
@@ -199,11 +135,7 @@
       "type": "Economic Analogy",
       "status": "Supporting",
       "summary": "Firms may automate because competitors will; no conspiracy is required for collectively destructive outcomes.",
-      "related": [
-        "POA-003",
-        "POA-014",
-        "POA-024"
-      ],
+      "related": ["POA-003", "POA-014", "POA-024"],
       "group": "Concepts"
     },
     {
@@ -212,10 +144,7 @@
       "type": "Concept",
       "status": "Supporting",
       "summary": "If junior roles disappear, future senior professionals may never accumulate the experience organizations still need.",
-      "related": [
-        "POA-004",
-        "POA-011"
-      ],
+      "related": ["POA-004", "POA-011"],
       "group": "Concepts"
     },
     {
@@ -224,10 +153,7 @@
       "type": "Concept",
       "status": "Supporting",
       "summary": "Physical automation can arrive sooner when environments are constrained or redesigned around machines.",
-      "related": [
-        "POA-005",
-        "POA-012"
-      ],
+      "related": ["POA-005", "POA-012"],
       "group": "Concepts"
     },
     {
@@ -236,12 +162,7 @@
       "type": "Economic Question",
       "status": "Core",
       "summary": "If labor no longer determines income, what gives humans a legitimate claim on machine-produced goods and services?",
-      "related": [
-        "POA-003",
-        "POA-006",
-        "POA-008",
-        "SOL-001"
-      ],
+      "related": ["POA-003", "POA-006", "POA-008", "SOL-001"],
       "group": "Concepts"
     },
     {
@@ -250,11 +171,7 @@
       "type": "Societal Risk",
       "status": "Supporting",
       "summary": "Rapid unemployment, inequality, and collapsing expectations can create unrest or revolutionary pressure.",
-      "related": [
-        "POA-007",
-        "POA-022",
-        "POA-025"
-      ],
+      "related": ["POA-007", "POA-022", "POA-025"],
       "group": "Concepts"
     },
     {
@@ -263,10 +180,7 @@
       "type": "Economic Concept",
       "status": "Supporting",
       "summary": "Land, energy, materials, desirable locations, time, and unique experiences remain scarce even in high-productivity worlds.",
-      "related": [
-        "POA-008",
-        "POA-026"
-      ],
+      "related": ["POA-008", "POA-026"],
       "group": "Concepts"
     },
     {
@@ -275,9 +189,7 @@
       "type": "Nature Analogy",
       "status": "Supporting",
       "summary": "Population/resource overshoot illustrates brutal self-correction when feedback is ignored.",
-      "related": [
-        "POA-009"
-      ],
+      "related": ["POA-009"],
       "group": "Concepts"
     },
     {
@@ -286,11 +198,7 @@
       "type": "Ethical Concept",
       "status": "Core",
       "summary": "AI disruption can blindside ordinary people before they understand what is happening or have time to retrain.",
-      "related": [
-        "POA-010",
-        "POA-019",
-        "POA-027"
-      ],
+      "related": ["POA-010", "POA-019", "POA-027"],
       "group": "Concepts"
     },
     {
@@ -299,11 +207,7 @@
       "type": "Market Analogy",
       "status": "Supporting",
       "summary": "Competitive frenzy and fear of missing extraordinary returns can drive capital and behavior to extremes.",
-      "related": [
-        "POA-014",
-        "POA-015",
-        "POA-028"
-      ],
+      "related": ["POA-014", "POA-015", "POA-028"],
       "group": "Concepts"
     },
     {
@@ -312,9 +216,7 @@
       "type": "Market Analogy",
       "status": "Supporting",
       "summary": "Individually rational extraction can create collective oversupply; used as an analogy for automation races.",
-      "related": [
-        "POA-015"
-      ],
+      "related": ["POA-015"],
       "group": "Concepts"
     },
     {
@@ -323,11 +225,7 @@
       "type": "Historical Theme",
       "status": "Supporting",
       "summary": "Mechanization, worker resistance, state suppression, and long transition periods provide a contrast with today's faster AI disruption.",
-      "related": [
-        "POA-019",
-        "POA-022",
-        "ART-005"
-      ],
+      "related": ["POA-019", "POA-022", "ART-005"],
       "group": "Concepts"
     },
     {
@@ -336,12 +234,7 @@
       "type": "Counterargument",
       "status": "Active",
       "summary": "Examine claims that AI makes work optional and money irrelevant; distinguish abundance from scarcity and zero economic profit from zero price.",
-      "related": [
-        "POA-007",
-        "POA-008",
-        "POA-020",
-        "ART-004"
-      ],
+      "related": ["POA-007", "POA-008", "POA-020", "ART-004"],
       "group": "Concepts"
     },
     {
@@ -350,10 +243,7 @@
       "type": "Historical/Policy Analogy",
       "status": "Supporting",
       "summary": "Fossil fuels had decades of warning and still have not fully transitioned; AI gives workers far less runway.",
-      "related": [
-        "POA-022",
-        "POA-029"
-      ],
+      "related": ["POA-022", "POA-029"],
       "group": "Concepts"
     },
     {
@@ -362,12 +252,7 @@
       "type": "Systemic Critique",
       "status": "Supporting",
       "summary": "Competitive capitalism rewards short-term cost reduction and market capture even when collective adoption may destabilize demand.",
-      "related": [
-        "POA-003",
-        "POA-015",
-        "POA-023",
-        "POA-030"
-      ],
+      "related": ["POA-003", "POA-015", "POA-023", "POA-030"],
       "group": "Concepts"
     },
     {
@@ -376,11 +261,7 @@
       "type": "Policy Theme",
       "status": "Supporting",
       "summary": "Lobbying, subsidies, pay-to-play incentives, short-term politics, and weak foresight can obstruct transition planning.",
-      "related": [
-        "POA-027",
-        "POA-030",
-        "ART-006"
-      ],
+      "related": ["POA-027", "POA-030", "ART-006"],
       "group": "Concepts"
     },
     {
@@ -389,13 +270,7 @@
       "type": "Policy Theme",
       "status": "Core",
       "summary": "One ethical firm cannot stabilize the economy alone; systemic problems require collective rules or shared mechanisms.",
-      "related": [
-        "POA-010",
-        "POA-028",
-        "POA-029",
-        "SOL-001",
-        "SOL-002"
-      ],
+      "related": ["POA-010", "POA-028", "POA-029", "SOL-001", "SOL-002"],
       "group": "Concepts"
     },
     {
@@ -404,11 +279,7 @@
       "type": "Policy Critique",
       "status": "Core",
       "summary": "Very low UBI levels such as $10k-$12k/year cannot support modern housing, healthcare, education, retirement, and middle-class consumption.",
-      "related": [
-        "POA-003",
-        "POA-007",
-        "SOL-001"
-      ],
+      "related": ["POA-003", "POA-007", "SOL-001"],
       "group": "Concepts"
     },
     {
@@ -417,10 +288,7 @@
       "type": "Societal Theme",
       "status": "Supporting",
       "summary": "Work provides income, structure, identity, contribution, and purpose; mass displacement can create a meaning crisis.",
-      "related": [
-        "POA-007",
-        "POA-019"
-      ],
+      "related": ["POA-007", "POA-019"],
       "group": "Concepts"
     },
     {
@@ -429,11 +297,7 @@
       "type": "Framing",
       "status": "Core",
       "summary": "Traditional AI safety focuses on misuse/alignment; economic destabilization from job destruction deserves comparable attention.",
-      "related": [
-        "POA-003",
-        "POA-010",
-        "POA-034"
-      ],
+      "related": ["POA-003", "POA-010", "POA-034"],
       "group": "Concepts"
     },
     {
@@ -442,9 +306,7 @@
       "type": "Risk Theme",
       "status": "Supporting",
       "summary": "AI in warfare and life-and-death decision systems is a distinct nefarious use requiring strong ethical limits.",
-      "related": [
-        "POA-033"
-      ],
+      "related": ["POA-033"],
       "group": "Concepts"
     },
     {
@@ -453,9 +315,7 @@
       "type": "Secondary Theme",
       "status": "Supporting",
       "summary": "Longer lifespans can stress pension, Social Security, healthcare, and retirement assumptions.",
-      "related": [
-        "POA-010"
-      ],
+      "related": ["POA-010"],
       "group": "Concepts"
     },
     {
@@ -464,9 +324,7 @@
       "type": "Ethical Distinction",
       "status": "Supporting",
       "summary": "Preventing early death differs systemically from broadly extending lifespan.",
-      "related": [
-        "POA-035"
-      ],
+      "related": ["POA-035"],
       "group": "Concepts"
     },
     {
@@ -475,10 +333,7 @@
       "type": "Positive Agenda",
       "status": "Core",
       "summary": "Use AI for materials, recycling, climate, dangerous environments, firefighting, nuclear accidents, and pandemic prevention.",
-      "related": [
-        "POA-002",
-        "POA-010"
-      ],
+      "related": ["POA-002", "POA-010"],
       "group": "Concepts"
     },
     {
@@ -487,10 +342,7 @@
       "type": "Economic Principle",
       "status": "Supporting",
       "summary": "Competitive markets tend to erode supernormal economic profits; this does not imply zero prices or zero production costs.",
-      "related": [
-        "POA-008",
-        "POA-026"
-      ],
+      "related": ["POA-008", "POA-026"],
       "group": "Concepts"
     },
     {
@@ -499,10 +351,7 @@
       "type": "Economic Framework",
       "status": "Supporting",
       "summary": "AI may substitute for labor and portions of IP/knowledge, concentrating power in capital owners.",
-      "related": [
-        "POA-003",
-        "POA-028"
-      ],
+      "related": ["POA-003", "POA-028"],
       "group": "Concepts"
     },
     {
@@ -511,24 +360,157 @@
       "type": "Core Phrase",
       "status": "Core",
       "summary": "High productive capacity with insufficient labor income creates goods without enough purchasing power to consume them.",
-      "related": [
-        "POA-003",
-        "POA-006",
-        "POA-018"
-      ],
+      "related": ["POA-003", "POA-006", "POA-018"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-041",
+      "title": "Effective Demand / Production Requires a Buyer",
+      "type": "Economic Concept",
+      "status": "Core",
+      "created": "August 28, 2026",
+      "summary": "Production is economically incomplete until a buyer is willing and able to transact. Productive capacity does not guarantee profitable sales when demand or purchasing power is insufficient.",
+      "related": ["POA-003", "POA-040", "POA-018", "POA-053"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-042",
+      "title": "Labor as a Factor of Production",
+      "type": "Economic Concept",
+      "status": "Core",
+      "created": "August 28, 2026",
+      "summary": "From a firm's production perspective, human labor is an input. If machines or AI can deliver the same result at lower total cost, the economic case for retaining that labor weakens.",
+      "related": ["POA-003", "POA-039", "POA-043"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-043",
+      "title": "Competitive Pressure Overrides Benevolence",
+      "type": "Economic Mechanism",
+      "status": "Core",
+      "created": "August 28, 2026",
+      "summary": "The automation problem does not require ruthless employers. Even humane firms may be forced to reduce unnecessary labor when competitors achieve structurally lower costs through automation.",
+      "related": ["POA-015", "POA-028", "POA-042"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-044",
+      "title": "Continuum of Automation Outcomes",
+      "type": "Framing",
+      "status": "Core",
+      "created": "August 28, 2026",
+      "summary": "Automation outcomes are not binary. The future can range from beneficial complementarity and higher prosperity through partial displacement, structural unemployment, and severe economic disruption.",
+      "related": ["POA-003", "POA-007", "POA-054"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-045",
+      "title": "No Guaranteed Human-Labor Frontier",
+      "type": "Core Question",
+      "status": "Core",
+      "created": "August 28, 2026",
+      "summary": "Past waves of automation repeatedly moved people into tasks machines could not yet perform. There is no established guarantee that economically valuable human-only tasks must remain sufficiently abundant forever.",
+      "related": ["POA-001", "POA-005", "POA-025", "POA-044", "POA-054"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-046",
+      "title": "Entrepreneurship Does Not Solve Demand",
+      "type": "Counterargument",
+      "status": "Supporting",
+      "created": "August 28, 2026",
+      "summary": "AI may make it easier for almost anyone to create a business, but producers still need paying customers. Universal entrepreneurship does not by itself solve a shortage or concentration of purchasing power.",
+      "related": ["POA-041", "POA-047", "POA-040"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-047",
+      "title": "Attention as a Scarce Resource",
+      "type": "Economic Concept",
+      "status": "Supporting",
+      "created": "August 28, 2026",
+      "summary": "As AI makes creation and production dramatically easier, human attention may become an even tighter bottleneck. Abundant producers can compete for a finite amount of customer time and attention.",
+      "related": ["POA-020", "POA-046"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-048",
+      "title": "Asset-Valuation Feedback Loop",
+      "type": "Financial-System Risk",
+      "status": "Supporting",
+      "created": "August 28, 2026",
+      "summary": "Structural labor-income decline could reduce retirement contributions and increase withdrawals, potentially changing persistent investment flows that help support financial-asset valuations.",
+      "related": ["POA-007", "POA-049", "POA-050"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-049",
+      "title": "Market Cap Is Not Realizable Wealth",
+      "type": "Financial Concept",
+      "status": "Supporting",
+      "created": "August 28, 2026",
+      "summary": "Market capitalization is shares outstanding multiplied by the prevailing marginal share price. It is not a pool of cash that all shareholders can simultaneously realize at that price.",
+      "related": ["POA-048", "POA-050"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-050",
+      "title": "Main Street / Wall Street Dual Dependency",
+      "type": "Economic Framework",
+      "status": "Supporting",
+      "created": "August 28, 2026",
+      "summary": "Labor income supports both current consumption on Main Street and savings, pensions, and retirement investment flows on Wall Street. Large labor-income losses can therefore transmit through both systems.",
+      "related": ["POA-003", "POA-041", "POA-048", "POA-049"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-051",
+      "title": "Post-Labor Equilibrium",
+      "type": "Future-System Question",
+      "status": "Core",
+      "created": "August 28, 2026",
+      "summary": "Highly automated production could ultimately create broad prosperity, but a stable equilibrium may require redesigning institutions built around the work-to-income-to-consumption relationship.",
+      "related": ["POA-007", "POA-008", "POA-018", "POA-031", "POA-032"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-052",
+      "title": "Automation Success as the Risk",
+      "type": "Framing",
+      "status": "Core",
+      "created": "August 28, 2026",
+      "summary": "The paradox may emerge not because automation fails, but because it succeeds exceptionally well at producing goods and services while reducing the need for the labor income that historically funds consumption.",
+      "related": ["POA-003", "POA-040", "POA-041", "POA-051"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-053",
+      "title": "Price Effects / Productivity Counterargument",
+      "type": "Counterargument",
+      "status": "Active",
+      "created": "August 28, 2026",
+      "summary": "Automation can lower prices as well as labor costs. POA must test whether price declines and productivity gains can offset reductions or concentration in labor income rather than assuming lower wages mechanically mean lower consumption.",
+      "related": ["POA-003", "POA-041", "POA-044"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-054",
+      "title": "Complementarity vs Displacement",
+      "type": "Counterargument",
+      "status": "Active",
+      "created": "August 28, 2026",
+      "summary": "AI can complement workers and raise their productivity rather than replace them. The unresolved economy-wide question is whether higher output preserves employment, expands demand, or lets fewer workers perform the same amount of work.",
+      "related": ["POA-005", "POA-044", "POA-045", "POA-053"],
       "group": "Concepts"
     },
     {
       "id": "ART-001",
       "title": "AI Is Not the Problem. What We Choose to Do With It Is.",
       "type": "Article",
-      "status": "Drafted",
+      "status": "Published",
       "summary": "Main nodes: POA-002, POA-013, POA-037",
-      "related": [
-        "POA-002",
-        "POA-013",
-        "POA-037"
-      ],
+      "url": "/",
+      "related": ["POA-002", "POA-013", "POA-037"],
       "group": "Articles"
     },
     {
@@ -537,11 +519,7 @@
       "type": "Article",
       "status": "Planned",
       "summary": "Main nodes: POA-003, POA-014, POA-040",
-      "related": [
-        "POA-003",
-        "POA-014",
-        "POA-040"
-      ],
+      "related": ["POA-003", "POA-014", "POA-040"],
       "group": "Articles"
     },
     {
@@ -550,11 +528,7 @@
       "type": "Article",
       "status": "Planned",
       "summary": "Main nodes: POA-004, POA-016, RES-001",
-      "related": [
-        "POA-004",
-        "POA-016",
-        "RES-001"
-      ],
+      "related": ["POA-004", "POA-016", "RES-001"],
       "group": "Articles"
     },
     {
@@ -563,11 +537,7 @@
       "type": "Article",
       "status": "Planned",
       "summary": "Main nodes: POA-007, POA-008, POA-026",
-      "related": [
-        "POA-007",
-        "POA-008",
-        "POA-026"
-      ],
+      "related": ["POA-007", "POA-008", "POA-026"],
       "group": "Articles"
     },
     {
@@ -576,11 +546,7 @@
       "type": "Article",
       "status": "Planned",
       "summary": "Main nodes: POA-022, POA-025, POA-027",
-      "related": [
-        "POA-022",
-        "POA-025",
-        "POA-027"
-      ],
+      "related": ["POA-022", "POA-025", "POA-027"],
       "group": "Articles"
     },
     {
@@ -589,10 +555,18 @@
       "type": "Article",
       "status": "Separate series",
       "summary": "Main nodes: POA-027, POA-029",
-      "related": [
-        "POA-027",
-        "POA-029"
-      ],
+      "related": ["POA-027", "POA-029"],
+      "group": "Articles"
+    },
+    {
+      "id": "ART-007",
+      "title": "Technology Has Always Replaced Human Labor. So What's Different This Time?",
+      "type": "Article",
+      "status": "Published",
+      "created": "August 28, 2026",
+      "summary": "Foundation article asking whether repeated historical job creation is evidence rather than a guarantee, and whether cognitive AI changes the automation frontier.",
+      "url": "/technology-has-always-replaced-human-labor.html",
+      "related": ["POA-001", "POA-005", "POA-025", "POA-044", "POA-045", "POA-052", "POA-054"],
       "group": "Articles"
     },
     {
@@ -601,11 +575,7 @@
       "type": "Research",
       "status": "Active",
       "summary": "Supports: POA-004, POA-011, ART-003",
-      "related": [
-        "POA-004",
-        "POA-011",
-        "ART-003"
-      ],
+      "related": ["POA-004", "POA-011", "ART-003"],
       "group": "Research"
     },
     {
@@ -614,10 +584,7 @@
       "type": "Research",
       "status": "Active",
       "summary": "Supports: POA-011, ART-002",
-      "related": [
-        "POA-011",
-        "ART-002"
-      ],
+      "related": ["POA-011", "ART-002"],
       "group": "Research"
     },
     {
@@ -626,11 +593,7 @@
       "type": "Research",
       "status": "Active",
       "summary": "Supports: POA-005, POA-012, POA-017",
-      "related": [
-        "POA-005",
-        "POA-012",
-        "POA-017"
-      ],
+      "related": ["POA-005", "POA-012", "POA-017"],
       "group": "Research"
     },
     {
