@@ -1,4 +1,28 @@
 [[edge_functions]]
+function = "public-enhancements"
+path = "/"
+
+[[edge_functions]]
+function = "public-enhancements"
+path = "/articles.html"
+
+[[edge_functions]]
+function = "public-enhancements"
+path = "/technology-has-always-replaced-human-labor.html"
+
+[[edge_functions]]
+function = "public-enhancements"
+path = "/should-government-have-protected-the-luddites.html"
+
+[[edge_functions]]
+function = "public-enhancements"
+path = "/privacy.html"
+
+[[edge_functions]]
+function = "public-enhancements"
+path = "/thanks.html"
+
+[[edge_functions]]
 function = "knowledge-graph-auth"
 path = "/knowledge-graph"
 
