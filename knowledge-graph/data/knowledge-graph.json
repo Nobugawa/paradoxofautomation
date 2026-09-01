@@ -1,7 +1,7 @@
 {
-  "version": "V1.2",
-  "updated": "August 28, 2026",
-  "nodeCount": 71,
+  "version": "V1.3",
+  "updated": "September 1, 2026",
+  "nodeCount": 84,
   "nodes": [
     {
       "id": "POA-001",
@@ -504,6 +504,136 @@
       "group": "Concepts"
     },
     {
+      "id": "POA-055",
+      "title": "Externalities / Not My Problem",
+      "type": "Economic-Governance Principle",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "Actors have weak incentives to voluntarily absorb costs they can shift onto workers, communities, taxpayers, the environment, or future generations. Plastics pollution, greenhouse-gas emissions, and automation displacement differ in mechanism but share the problem that private benefits can be separated from broader social costs.",
+      "related": ["POA-003", "POA-015", "POA-028", "POA-030", "POA-056", "POA-057", "POA-058"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-056",
+      "title": "Proper Government / Collective Governance",
+      "type": "Governance Principle",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "When individually rational private behavior creates significant costs for people outside the decision, a legitimate collective mechanism is needed to make those consequences part of the decision. Proper government does not mean maximum regulation; it means competent rules, incentives, liability, standards, taxation, support, or other institutions proportionate to the systemic problem.",
+      "related": ["POA-010", "POA-030", "POA-055", "POA-057", "POA-066", "POA-067", "ART-005"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-057",
+      "title": "Proportional Regulation",
+      "type": "Policy Design Principle",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "Regulation can itself become unjust or ineffective when compliance burdens and penalties are disconnected from actual harm, scale, culpability, recurrence, economic benefit, or ability to pay. The same fixed fine can be existential for a small business yet trivial for a giant corporation.",
+      "related": ["POA-029", "POA-030", "POA-055", "POA-056"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-058",
+      "title": "Decision-Maker Consequence Gap",
+      "type": "Accountability Principle",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "The farther decision-makers are insulated from the downside of choices whose upside they capture, the greater the opportunity for reckless or socially damaging behavior. This applies to corporate risk-taking, externalities, automation, environmental damage, and other high-impact decisions.",
+      "related": ["POA-055", "POA-059", "POA-060", "POA-062"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-059",
+      "title": "Corporate Entity / Limited Liability and Accountability",
+      "type": "Institutional Question",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "The corporate entity and limited liability enable investment and large-scale productive activity, but they can also separate consequential human decisions from personal financial consequences. The policy question is where useful liability protection should end and meaningful individual accountability should begin.",
+      "related": ["POA-058", "POA-060", "POA-029", "POA-056"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-060",
+      "title": "Asymmetric Upside / Socialized Downside",
+      "type": "Moral Hazard",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "Executives or institutions may capture bonuses, profits, prestige, and appreciation when risky decisions succeed while shareholders, employees, creditors, taxpayers, or society absorb much of the catastrophic downside. Too-big-to-fail institutions are a textbook case of this incentive problem.",
+      "related": ["POA-058", "POA-059", "POA-055", "POA-029"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-061",
+      "title": "Compounding Systemic Stresses",
+      "type": "Systems Framework",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "AI displacement would not arrive in a clean economic system. It can interact with existing weaknesses in hiring, housing, healthcare, retirement, public finance, education, debt, and social insurance so that combined effects are larger than any single shock considered in isolation.",
+      "related": ["POA-003", "POA-007", "POA-048", "POA-050", "POA-064", "POA-065", "SOL-003"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-062",
+      "title": "Empathy Gap / Distance From Consequences",
+      "type": "Societal-Governance Principle",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "People are more willing to accept disruption when they believe someone else will bear it. Distance from job loss, discrimination, poverty, pollution, or other hardship can encourage canned individual-blame explanations and reduce urgency, especially when decision-makers are insulated from the consequences of policy or technology choices.",
+      "related": ["POA-010", "POA-022", "POA-058", "POA-056", "POA-066"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-063",
+      "title": "Individual Attribution vs Systemic Evidence",
+      "type": "Research Principle",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "AI displacement does not require proving that every individual termination was caused by AI. Economy-wide effects can be identified empirically through hiring, vacancies, wages, occupational employment, productivity, headcount, employer disclosures, and comparisons between more- and less-exposed work.",
+      "related": ["POA-011", "RES-001", "RES-002", "POA-061"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-064",
+      "title": "Labor-Market Friction Amplifier",
+      "type": "Labor-Market Mechanism",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "AI may make occupational switching more necessary while modern hiring systems make switching unnecessarily difficult. Applicant filters, exact-title requirements, credential screens, and weak recognition of transferable skills can prolong displacement even when workers are capable of moving into adjacent work.",
+      "related": ["POA-004", "POA-011", "POA-016", "POA-022", "POA-061", "ART-005"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-065",
+      "title": "Social Insurance Payroll Dependency",
+      "type": "Fiscal-System Risk",
+      "status": "Supporting",
+      "created": "September 1, 2026",
+      "summary": "Systems such as U.S. Social Security depend heavily on taxable payroll from current workers and employers. Persistent AI-driven reductions in employment or taxable labor income could therefore transmit beyond individual households into social-insurance financing, alongside effects on retirement contributions and public revenue.",
+      "related": ["POA-035", "POA-050", "POA-061", "SOL-003"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-066",
+      "title": "Policymaker Competence / Expertise Asymmetry",
+      "type": "Governance Risk",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "Elected officials govern extraordinarily complex systems despite few formal knowledge requirements. When policymakers lack enough cross-disciplinary literacy to interrogate sophisticated industry, ideological, or advocacy claims, expertise asymmetry can shift practical policy power toward organized interests that frame the problem, evidence, and proposed solution.",
+      "related": ["POA-029", "POA-030", "POA-056", "POA-062", "POA-067", "SOL-003", "ART-005"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-067",
+      "title": "Governing Competence vs Political Skill",
+      "type": "Governance Distinction",
+      "status": "Core",
+      "created": "September 1, 2026",
+      "summary": "Winning elections, messaging, coalition building, fundraising, negotiation, and maintaining office are political skills; governing complex technological and economic systems requires a different mix of broad literacy, critical reasoning, independent expertise, ethics, intellectual humility, and awareness of consequences.",
+      "related": ["POA-056", "POA-066", "POA-029", "SOL-003"],
+      "group": "Concepts"
+    },
+    {
       "id": "ART-001",
       "title": "AI Is Not the Problem. What We Choose to Do With It Is.",
       "type": "Article",
@@ -542,11 +672,14 @@
     },
     {
       "id": "ART-005",
-      "title": "AI Disruption: Speed, Fairness, and the Luddite Lesson",
+      "title": "Should the Government Have Protected the Luddites? And What Does the Answer Mean for AI?",
       "type": "Article",
-      "status": "Planned",
-      "summary": "Main nodes: POA-022, POA-025, POA-027",
-      "related": ["POA-022", "POA-025", "POA-027"],
+      "status": "Published",
+      "created": "September 1, 2026",
+      "updated": "September 1, 2026",
+      "summary": "Uses the Luddite transition to distinguish protecting obsolete jobs from protecting livelihoods, and asks what responsibility government has when technological displacement becomes systemic rather than isolated.",
+      "url": "/should-government-have-protected-the-luddites.html",
+      "related": ["POA-022", "POA-025", "POA-056", "POA-061", "POA-064", "POA-066"],
       "group": "Articles"
     },
     {
