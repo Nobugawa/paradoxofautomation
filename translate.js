@@ -24,7 +24,22 @@
     .poa-translate.open .poa-translate-menu{display:block}.poa-translate-intro{font:700 .76rem/1.35 Georgia,serif;margin:2px 4px 9px;color:#34322e}.poa-translate-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
     .poa-language{display:block;width:100%!important;border:1px solid #c8c0b2!important;background:#f4f0e7!important;color:#0e0f11!important;padding:8px!important;text-align:left;font:700 .74rem/1.2 system-ui!important;cursor:pointer;border-radius:0!important}.poa-language:hover{border-color:#0e0f11!important;background:#ebe5d9!important}
     .poa-translate-more{display:block;margin-top:8px;padding-top:8px;border-top:1px solid #c8c0b2;font-size:.69rem;line-height:1.4;color:#666158}.poa-translate-more a{color:#9f3118!important;font-weight:800;text-decoration:none!important}
-    @media(max-width:780px){.poa-translate-label{display:none}.poa-translate-trigger{padding:7px 8px!important}.poa-translate-menu{position:fixed;right:12px;left:12px;top:74px;width:auto}.poa-translate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:780px){
+      header .nav{flex-wrap:wrap!important;padding:7px 0 8px!important;row-gap:6px!important}
+      header .brand{flex:1 1 auto!important;max-width:245px!important}
+      header nav{display:flex!important;flex:1 1 100%!important;width:100%!important;justify-content:flex-end!important;align-items:center!important;gap:10px!important;font-size:.78rem!important}
+      header nav>a{display:inline-block!important;white-space:nowrap!important}
+      header nav .subscribe,header nav .subscribe-link{padding:7px 9px!important;font-size:.75rem!important}
+      .poa-translate-label{display:none}
+      .poa-translate-trigger{padding:7px 8px!important}
+      .poa-translate-menu{position:fixed;right:12px;left:12px;top:112px;width:auto}
+      .poa-translate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:430px){
+      header .brand{max-width:220px!important}
+      header nav{gap:8px!important;font-size:.74rem!important}
+      header nav .subscribe,header nav .subscribe-link{padding:6px 8px!important}
+    }
   `;
   document.head.appendChild(style);
 
