@@ -1,4 +1,11 @@
 (()=>{
+  // When Google Translate is already proxying the site, use Google's own
+  // language bar. Rendering our selector there would try to translate an
+  // already-translated proxy URL and can produce a "Can't translate" error.
+  const host=location.hostname.toLowerCase();
+  const isGoogleTranslated=host.endsWith('.translate.goog')||host.includes('translate.googleusercontent.com')||location.search.includes('_x_tr_');
+  if(isGoogleTranslated) return;
+
   const nav=document.querySelector('header nav');
   if(!nav||document.querySelector('.poa-translate')) return;
 
@@ -30,7 +37,9 @@
 
   const grid=wrap.querySelector('.poa-translate-grid');
   const translateTo=code=>{
-    const url='https://translate.google.com/translate?sl=auto&tl='+encodeURIComponent(code)+'&u='+encodeURIComponent(location.href);
+    // Always translate the canonical POA URL, never a prior Google proxy URL.
+    const source='https://paradoxofautomation.com'+location.pathname+location.search+location.hash;
+    const url='https://translate.google.com/translate?sl=auto&tl='+encodeURIComponent(code)+'&u='+encodeURIComponent(source);
     location.href=url;
   };
   langs.forEach(([code,label])=>{
