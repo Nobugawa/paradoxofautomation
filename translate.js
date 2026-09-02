@@ -21,7 +21,7 @@
       document.head.appendChild(style);
       const figure=document.createElement('figure');
       figure.className='feedback-visual';
-      figure.innerHTML='<img src="/media/paradox-feedback-loop.webp" width="600" height="450" loading="lazy" alt="The Paradox of Automation feedback loop: firms automate to cut costs, fewer workers are needed, labor income and purchasing power fall, consumers buy less, and demand weakens for the whole economy."><figcaption>A simplified feedback loop. The outcome depends on scale, prices, new jobs, ownership and policy.</figcaption>';
+      figure.innerHTML='<img src="/media/paradox-feedback-loop.png" width="1448" height="1086" loading="lazy" alt="The Paradox of Automation feedback loop: firms automate to cut costs, fewer workers are needed, labor income and purchasing power fall, consumers buy less, and demand weakens for the whole economy."><figcaption>A simplified feedback loop. The outcome depends on scale, prices, new jobs, ownership and policy.</figcaption>';
       problemParagraph.insertAdjacentElement('afterend',figure);
     }
 
