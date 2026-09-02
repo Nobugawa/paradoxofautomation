@@ -24,21 +24,29 @@
     .poa-translate.open .poa-translate-menu{display:block}.poa-translate-intro{font:700 .76rem/1.35 Georgia,serif;margin:2px 4px 9px;color:#34322e}.poa-translate-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
     .poa-language{display:block;width:100%!important;border:1px solid #c8c0b2!important;background:#f4f0e7!important;color:#0e0f11!important;padding:8px!important;text-align:left;font:700 .74rem/1.2 system-ui!important;cursor:pointer;border-radius:0!important}.poa-language:hover{border-color:#0e0f11!important;background:#ebe5d9!important}
     .poa-translate-more{display:block;margin-top:8px;padding-top:8px;border-top:1px solid #c8c0b2;font-size:.69rem;line-height:1.4;color:#666158}.poa-translate-more a{color:#9f3118!important;font-weight:800;text-decoration:none!important}
+    .poa-mobile-menu{display:none;position:relative}
+    .poa-menu-trigger{display:inline-flex;align-items:center;justify-content:center;width:42px!important;height:38px!important;padding:0!important;border:1px solid #0e0f11!important;background:transparent!important;color:#0e0f11!important;font:800 1.35rem/1 system-ui!important;cursor:pointer}
+    .poa-menu-panel{display:none;position:absolute;right:0;top:calc(100% + 9px);z-index:99998;min-width:170px;background:#fffdf8;border:1px solid #0e0f11;box-shadow:0 14px 35px rgba(14,15,17,.18);padding:7px}
+    .poa-mobile-menu.open .poa-menu-panel{display:block}.poa-menu-panel a{display:block!important;padding:10px 11px!important;text-decoration:none!important;color:#0e0f11!important;font:800 .82rem/1.2 system-ui!important;background:transparent!important;border:0!important}.poa-menu-panel a:hover{background:#ebe5d9!important}
     @media(max-width:780px){
-      header .nav{flex-wrap:wrap!important;padding:7px 0 8px!important;row-gap:6px!important}
-      header .brand{flex:1 1 auto!important;max-width:245px!important}
-      header nav{display:flex!important;flex:1 1 100%!important;width:100%!important;justify-content:flex-end!important;align-items:center!important;gap:10px!important;font-size:.78rem!important}
+      header .nav{flex-wrap:nowrap!important;padding:6px 0!important;gap:8px!important;min-height:68px!important}
+      header .brand{flex:1 1 auto!important;max-width:220px!important;min-width:0!important}
+      header .brand img{max-height:50px!important}
+      header nav{display:flex!important;flex:0 0 auto!important;width:auto!important;justify-content:flex-end!important;align-items:center!important;gap:8px!important;font-size:.74rem!important;white-space:nowrap!important}
       header nav>a{display:inline-block!important;white-space:nowrap!important}
-      header nav .subscribe,header nav .subscribe-link{padding:7px 9px!important;font-size:.75rem!important}
+      header nav .subscribe,header nav .subscribe-link{padding:7px 8px!important;font-size:.72rem!important}
       .poa-translate-label{display:none}
       .poa-translate-trigger{padding:7px 8px!important}
-      .poa-translate-menu{position:fixed;right:12px;left:12px;top:112px;width:auto}
+      .poa-translate-menu{position:fixed;right:12px;left:12px;top:78px;width:auto}
       .poa-translate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
-    @media(max-width:430px){
-      header .brand{max-width:220px!important}
-      header nav{gap:8px!important;font-size:.74rem!important}
-      header nav .subscribe,header nav .subscribe-link{padding:6px 8px!important}
+    @media(max-width:389px){
+      header .brand{max-width:205px!important}
+      header nav>a{display:none!important}
+      header nav .subscribe,header nav .subscribe-link{display:none!important}
+      header nav{gap:7px!important}
+      .poa-mobile-menu{display:inline-flex}
+      .poa-translate-trigger{width:40px!important;height:38px!important;padding:0!important;justify-content:center!important}
     }
   `;
   document.head.appendChild(style);
@@ -49,6 +57,12 @@
 
   const subscribe=nav.querySelector('.subscribe,.subscribe-link');
   if(subscribe) nav.insertBefore(wrap,subscribe); else nav.appendChild(wrap);
+
+  // Very narrow phones use a hamburger, while the globe remains visible.
+  const mobileMenu=document.createElement('div');
+  mobileMenu.className='poa-mobile-menu';
+  mobileMenu.innerHTML=`<button class="poa-menu-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Open site menu">☰</button><div class="poa-menu-panel"><a href="/articles.html">Articles</a><a href="/#about">About</a><a href="/#subscribe">Subscribe</a></div>`;
+  nav.appendChild(mobileMenu);
 
   const grid=wrap.querySelector('.poa-translate-grid');
   const translateTo=code=>{
@@ -64,8 +78,12 @@
   });
 
   const trigger=wrap.querySelector('.poa-translate-trigger');
-  const close=()=>{wrap.classList.remove('open');trigger.setAttribute('aria-expanded','false')};
-  trigger.addEventListener('click',e=>{e.stopPropagation();const open=!wrap.classList.contains('open');close();if(open){wrap.classList.add('open');trigger.setAttribute('aria-expanded','true')}});
-  document.addEventListener('click',e=>{if(!wrap.contains(e.target)) close()});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape') close()});
+  const menuTrigger=mobileMenu.querySelector('.poa-menu-trigger');
+  const closeTranslate=()=>{wrap.classList.remove('open');trigger.setAttribute('aria-expanded','false')};
+  const closeMenu=()=>{mobileMenu.classList.remove('open');menuTrigger.setAttribute('aria-expanded','false')};
+
+  trigger.addEventListener('click',e=>{e.stopPropagation();const open=!wrap.classList.contains('open');closeTranslate();closeMenu();if(open){wrap.classList.add('open');trigger.setAttribute('aria-expanded','true')}});
+  menuTrigger.addEventListener('click',e=>{e.stopPropagation();const open=!mobileMenu.classList.contains('open');closeMenu();closeTranslate();if(open){mobileMenu.classList.add('open');menuTrigger.setAttribute('aria-expanded','true')}});
+  document.addEventListener('click',e=>{if(!wrap.contains(e.target))closeTranslate();if(!mobileMenu.contains(e.target))closeMenu()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeTranslate();closeMenu()}});
 })();
