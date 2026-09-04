@@ -29,6 +29,20 @@
     if(version&&version.textContent.trim()==='SITE V1.8') version.textContent='SITE V1.9';
   }
 
+  if(location.pathname==='/production-without-consumption.html'||location.pathname==='/production-without-consumption'){
+    const oldText='An economy does not need only the capacity to produce. It needs a durable mechanism that gives people a claim on what is produced.';
+    const target=[...document.querySelectorAll('.pulse')].find(el=>el.textContent.replace(/\s+/g,' ').trim()===oldText);
+    if(target){
+      const replacement=document.createElement('div');
+      replacement.className='human-purchasing-power';
+      replacement.innerHTML='<p><strong>A robust economy needs the capacity to produce the goods and services people require at competitive prices. But what happens if many people no longer have enough income to buy those goods and services because the labor they once provided is no longer needed?</strong></p><p><strong>If AI substantially reduces the need for human labor, the problem is not only economic output. It is what happens to the people whose income depended on that work.</strong></p><p><strong>That is not a sustainable outcome. If labor income disappears at meaningful scale, some new mechanism will eventually be needed to preserve people’s ability to participate in the economy.</strong></p>';
+      const style=document.createElement('style');
+      style.textContent='.human-purchasing-power{margin:50px 0;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);padding:24px 0 8px}.human-purchasing-power p{font:700 clamp(1.35rem,2.6vw,1.95rem)/1.38 Georgia,serif;margin:0 0 18px;color:var(--ink)}';
+      document.head.appendChild(style);
+      target.replaceWith(replacement);
+    }
+  }
+
   const nav=document.querySelector('header nav');
   if(!nav||document.querySelector('.poa-translate')) return;
 
