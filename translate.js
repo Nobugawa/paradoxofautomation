@@ -11,7 +11,9 @@
 
     document.querySelectorAll('.thesis blockquote,.pulse').forEach(el=>{
       const normalized=el.textContent.replace(/\s+/g,' ').trim();
-      if(normalized===oldA||normalized===oldB) el.textContent=replacement;
+      if(normalized===oldA||normalized===oldB||normalized===replacement){
+        el.innerHTML='For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can be <em>detrimental to society.</em>';
+      }
     });
 
     const problemParagraph=[...document.querySelectorAll('article p')].find(p=>p.textContent.trim()==='And now the island has a problem.');
@@ -30,6 +32,9 @@
   }
 
   if(location.pathname==='/production-without-consumption.html'||location.pathname==='/production-without-consumption'){
+    const thesis=[...document.querySelectorAll('.thesis blockquote')].find(el=>el.textContent.replace(/\s+/g,' ').trim()==='Productive capacity and purchasing power are not the same thing. AI could expand one while weakening the other.');
+    if(thesis) thesis.innerHTML='Productive capacity and purchasing power are not the same thing. AI could expand one while <em>weakening the other.</em>';
+
     const oldText='An economy does not need only the capacity to produce. It needs a durable mechanism that gives people a claim on what is produced.';
     const target=[...document.querySelectorAll('.pulse')].find(el=>el.textContent.replace(/\s+/g,' ').trim()===oldText);
     if(target){
