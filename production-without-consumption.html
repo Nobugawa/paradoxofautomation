@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Production Without Consumption | Paradox of Automation</title>
+<meta name="description" content="What happens if AI allows the economy to produce far more with far less human labor, while the income needed to buy that production weakens?" />
+<meta name="author" content="Philos Kim" />
+<link rel="canonical" href="https://paradoxofautomation.com/production-without-consumption.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Production Without Consumption: What Happens When the Economy Can Make More Than Its Customers Can Afford?" />
+<meta property="og:description" content="Productive capacity is not the same thing as purchasing power. AI could expand one while weakening the other." />
+<meta property="og:url" content="https://paradoxofautomation.com/production-without-consumption.html" />
+<meta property="og:site_name" content="Paradox of Automation" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#0e0f11" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<style>
+:root{--paper:#f4f0e7;--ink:#0e0f11;--muted:#666158;--line:#c8c0b2;--signal:#d64b2a;--signal-dark:#9f3118;--white:#fffdf8;--max:1120px;--read:760px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(rgba(14,15,17,.026) 1px,transparent 1px),linear-gradient(90deg,rgba(14,15,17,.022) 1px,transparent 1px),var(--paper);background-size:28px 28px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.reading{width:min(calc(100% - 40px),var(--read));margin:auto}
+header{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(14,15,17,.16);background:rgba(244,240,231,.92);backdrop-filter:blur(12px)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:block;text-decoration:none;line-height:0;flex:0 1 520px}.brand img{display:block;width:min(100%,520px);max-height:68px;object-fit:contain;object-position:left center}nav{display:flex;gap:20px;align-items:center;font-size:.86rem}nav a{text-decoration:none}.subscribe{background:var(--ink);color:var(--paper);padding:8px 13px;font-weight:700}
+.hero{padding:70px 0 54px;border-bottom:1px solid var(--line)}.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:800;color:var(--signal-dark);margin-bottom:20px}.eyebrow:before{content:"";width:34px;height:3px;background:var(--signal)}h1{font:700 clamp(2.8rem,6.7vw,6.1rem)/.95 Georgia,"Times New Roman",serif;letter-spacing:-.05em;margin:0 0 28px}.deck{max-width:850px;font:clamp(1.2rem,2.2vw,1.55rem)/1.5 Georgia,serif;color:#34322e;margin:0 0 32px}.meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.79rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.tag{border:1px solid var(--line);padding:5px 8px}
+.thesis{background:var(--ink);color:var(--paper);padding:56px 0}.thesis-grid{display:grid;grid-template-columns:.8fr 2fr;gap:50px}.thesis-label{text-transform:uppercase;letter-spacing:.15em;font-weight:800;font-size:.72rem;color:#d6cfc2}.thesis blockquote{margin:0;font:clamp(1.8rem,3.6vw,3.15rem)/1.12 Georgia,serif;letter-spacing:-.025em}.thesis blockquote em{color:#ff7657;font-style:normal}
+article{padding:70px 0 46px}article h2{font:700 clamp(1.9rem,4vw,3rem)/1.08 Georgia,serif;letter-spacing:-.025em;margin:2.1em 0 .75em}article p{font:1.25rem/1.82 Georgia,serif;margin:0 0 1.55em;color:#24231f}article p.lead:first-letter{float:left;font-size:4.5rem;line-height:.82;padding-right:10px;padding-top:9px;font-weight:700;color:var(--signal-dark)}sup a{text-decoration:none;color:var(--signal-dark);font:800 .72rem system-ui}.pulse{margin:50px 0;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);padding:24px 0 26px;font:700 clamp(1.45rem,3vw,2.15rem)/1.3 Georgia,serif}.question{margin:48px 0;padding:26px 30px;border-left:5px solid var(--signal);background:rgba(255,255,255,.35);font:700 clamp(1.4rem,2.5vw,1.9rem)/1.35 Georgia,serif}.equation{margin:42px 0;background:var(--white);border:1px solid var(--ink);padding:26px;text-align:center}.equation strong{display:block;font:700 clamp(1.45rem,3vw,2.2rem)/1.25 Georgia,serif}.equation span{display:block;margin-top:10px;color:var(--muted);font-size:.83rem;text-transform:uppercase;letter-spacing:.09em}
+.known{margin:56px 0;border:1px solid var(--ink);background:var(--white)}.known-head{padding:14px 20px;background:var(--ink);color:var(--paper);text-transform:uppercase;letter-spacing:.13em;font-weight:900;font-size:.75rem}.known-grid{display:grid;grid-template-columns:1fr 1fr}.known-grid>div{padding:24px}.known-grid>div:first-child{border-right:1px solid var(--ink)}.known h3{font:700 1.45rem/1.1 Georgia,serif;margin:0 0 12px}.known p{font:1rem/1.6 system-ui;margin:0;color:#403c36}
+.notes{border-top:2px solid var(--ink);margin-top:70px;padding-top:26px}.notes h2{font:800 .78rem/1 system-ui;text-transform:uppercase;letter-spacing:.14em;margin:0 0 18px}.notes ol{padding-left:22px;margin:0}.notes li{font:.92rem/1.6 system-ui;color:#4f4b44;margin:0 0 13px}.notes a{color:var(--signal-dark)}
+.explore{padding:46px 0 62px;background:#ebe5d9;border-top:1px solid var(--line)}.explore h2{font:700 clamp(1.9rem,4vw,3rem)/1.05 Georgia,serif;margin:0 0 14px}.explore p{max-width:720px;color:#403c36}.explore a{display:inline-block;margin:8px 6px 0 0;text-decoration:none;background:var(--ink);color:var(--paper);padding:11px 15px;font-weight:800}.newsletter{background:var(--signal);color:#fff9ef;padding:64px 0}.newsletter-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}.newsletter h2{font:clamp(2.4rem,5vw,4.3rem)/1 Georgia,serif;margin:0 0 18px}.newsletter p{margin:0}.form-row{display:flex;gap:8px}input[type=email]{flex:1;min-width:0;border:2px solid #fff9ef;background:transparent;color:#fff;font:600 1rem system-ui;padding:14px}button{border:2px solid var(--ink);background:var(--ink);color:#fff;font:800 .9rem system-ui;padding:14px 20px}.consent{display:flex;gap:9px;margin-top:12px;font-size:.8rem}.about{padding:48px 0;background:#17181a;color:#dcd7cc}.about-grid{display:grid;grid-template-columns:.75fr 2fr;gap:50px}.about h3{margin:0;font:700 1rem Georgia,serif;color:#fff}.about p{margin:0;max-width:760px;font-size:.93rem}footer{background:#0e0f11;color:#928c82;padding:25px 0;font-size:.76rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#c8c2b6}.version{position:fixed;right:10px;bottom:8px;font:700 10px/1 ui-monospace,monospace;color:#746e64;background:rgba(244,240,231,.92);border:1px solid rgba(14,15,17,.15);padding:5px 7px}
+@media(max-width:780px){.nav{min-height:68px}.brand{max-width:305px}nav a:not(.subscribe){display:none}.thesis-grid,.newsletter-grid,.about-grid,.known-grid{grid-template-columns:1fr}.known-grid>div:first-child{border-right:0;border-bottom:1px solid var(--ink)}.form-row{flex-direction:column}button{width:100%}article p{font-size:1.14rem}.version{position:static;display:block;width:max-content;margin:14px 20px 10px auto;background:transparent;color:#928c82;border-color:#343537}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Production Without Consumption: What Happens When the Economy Can Make More Than Its Customers Can Afford?","author":{"@type":"Person","name":"Philos Kim"},"publisher":{"@type":"Organization","name":"Paradox of Automation"},"datePublished":"2026-09-04","dateModified":"2026-09-04","mainEntityOfPage":"https://paradoxofautomation.com/production-without-consumption.html"}</script>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="/"><img src="/media/poa-logo.png" alt="Paradox of Automation — The Human Equation" /></a><nav><a href="/">Home</a><a href="/articles.html">Articles</a><a class="subscribe" href="#subscribe">Subscribe</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Risk Mechanism · Essay</div><h1>Production Without Consumption</h1><p class="deck">What happens when the economy becomes extraordinarily good at making things, but increasingly weak at distributing the purchasing power needed to buy them?</p><div class="meta"><strong>By Philos Kim</strong><span>September 4, 2026</span><span class="tag">Demand · Income · Purchasing Power</span></div></div></section>
+<section class="thesis"><div class="wrap thesis-grid"><div class="thesis-label">The problem</div><blockquote>Productive capacity and purchasing power are not the same thing. AI could expand one while weakening the other.</blockquote></div></section>
+<article><div class="reading">
+<p class="lead">Imagine an economy that can produce almost anything its people need.</p>
+<p>Food is plentiful. Manufacturing is highly automated. Software can perform much of the routine work once done by accountants, analysts, programmers and administrators. Machines handle more transportation, warehousing and physical production. Artificial intelligence makes professional services dramatically cheaper to deliver.</p>
+<p>By the usual measure of technological progress, this sounds like success.</p>
+<p>But now add one condition.</p>
+<div class="question">The same technologies that increased production also greatly reduced the amount of human labor businesses need.</div>
+<p>The economy can make more than ever.</p>
+<p>But many of the people who once earned wages producing those goods and services now earn less—or nothing at all.</p>
+<p>That is the problem of <strong>production without consumption</strong>.</p>
+
+<h2>A Product Is Not a Sale</h2>
+<p>Producing something and selling it are two different events.</p>
+<p>A warehouse containing one million televisions represents productive success only in a physical sense. Economically, the televisions become valuable to the producer when customers are willing and able to buy them.</p>
+<p>Wanting something is not enough.</p>
+<p>The customer needs purchasing power.</p>
+<div class="equation"><strong>Production capacity ≠ effective demand</strong><span>Being able to make something does not create a customer who can pay for it.</span></div>
+<p>This distinction is easy to lose when the conversation around AI is dominated by productivity.</p>
+<p>How much faster can a task be completed?</p>
+<p>How many employees can one person with AI replace?</p>
+<p>How much can a company reduce its cost structure?</p>
+<p>How much additional output can machines produce?</p>
+<p>Those are legitimate questions.</p>
+<p>But they all concern the supply side.</p>
+<p>The demand side asks something different:</p>
+<div class="pulse">After the efficiency gains have been captured, who has the income to buy the additional output?</div>
+
+<h2>The Worker Has Two Economic Identities</h2>
+<p>To an individual employer, a worker appears primarily as a cost.</p>
+<p>Salary. Payroll taxes. Benefits. Office space. Equipment. Management time.</p>
+<p>A technology that allows a company to eliminate those costs can therefore look unquestionably attractive.</p>
+<p>But the same worker has another identity.</p>
+<p>Outside the company, that worker is a customer.</p>
+<p>The salary that was an expense on one firm's income statement becomes revenue elsewhere when the worker pays rent, buys groceries, replaces a car, goes to a restaurant, takes a vacation, hires a contractor or pays for entertainment.</p>
+<p>Modern economies circulate income.</p>
+<p>The dollar paid as compensation does not normally stop with the employee. It moves through other businesses, workers, landlords, lenders, governments and investors.</p>
+<div class="question">Labor income is not merely a cost of production. It is also one of the principal ways purchasing power enters the consumer economy.</div>
+
+<h2>The Common Consumer Is Not a Side Character</h2>
+<p>This matters particularly in consumer-driven economies.</p>
+<p>In the United States, personal consumption expenditures accounted for about 68.3% of current-dollar gross domestic product in the first quarter of 2025.<sup><a href="#note-1">1</a></sup></p>
+<p>That does not mean every dollar of consumption comes from wages, nor does it mean consumer spending is the only source of demand. Households also spend from savings, transfers, investment income and credit. Businesses invest. Governments spend. Countries export.</p>
+<p>But it does demonstrate the scale of household consumption in the economic system.</p>
+<p>Ordinary consumers are not standing at the edge of the economy watching corporations create wealth.</p>
+<p>They are a large part of the market corporations are trying to sell to.</p>
+
+<h2>Can't the Wealthy Just Spend More?</h2>
+<p>If automation greatly increases corporate profits and asset values, perhaps the owners of those assets will simply spend enough to replace the lost consumption of displaced workers.</p>
+<p>They will spend some of it.</p>
+<p>But there is no reason to assume that concentrated wealth produces the same level of consumer spending as broadly distributed income and wealth.</p>
+<p>Federal Reserve researchers reported in 2025 that consumer spending is substantially less sensitive to wealth held by the highest-income households. Their estimates implied that fluctuations in wealth held by the top 20% of the income distribution were associated with about 0.8 cents of additional spending per dollar of wealth, compared with roughly 7.5 cents for the bottom 80%. They concluded that wealth gains concentrated among high-income households translated into less consumption than the same gains would have if distributed more broadly.<sup><a href="#note-2">2</a></sup></p>
+<p>This does not mean wealthy people do not consume.</p>
+<p>It means there are practical limits to personal consumption.</p>
+<p>A billionaire can own multiple houses, cars and aircraft. But becoming twice as wealthy does not require eating twice as many meals, buying twice as many refrigerators or purchasing twice as many haircuts.</p>
+<p>Much of additional wealth is invested rather than consumed.</p>
+<p>Which leads to the next objection.</p>
+
+<h2>What About Business Investment?</h2>
+<p>Investment is real demand.</p>
+<p>A company building a data center pays construction firms, equipment suppliers, utilities, engineers and workers. An entrepreneur starting a new company buys services and hires people. Capital spending can be an enormous economic force.</p>
+<p>So rising investment could offset some reduction in household consumption.</p>
+<p>But investment is usually made because someone expects a future return.</p>
+<div class="question">A company does not normally build ten more factories simply because it has the money. It builds them because it expects customers for what those factories will produce.</div>
+<p>If final demand weakens persistently, the expected return on expanding productive capacity also weakens.</p>
+<p>This creates a limit to the idea that capital expenditure can indefinitely replace consumer demand.</p>
+<p>The investment itself ultimately points toward a future buyer.</p>
+
+<h2>What If AI Makes Everything Cheaper?</h2>
+<p>This is one of the strongest counterarguments to the entire Paradox of Automation thesis.</p>
+<p>Productivity can lower prices.</p>
+<p>If income falls but prices fall by the same amount, the household may not be worse off in real terms.</p>
+<p>Imagine someone earning $100,000 while the goods and services required to maintain that person's standard of living cost $100,000.</p>
+<p>Now imagine a radically different nominal economy in which the same person earns only $10,000—but the identical standard of living costs only $10,000.</p>
+<p>The numbers have collapsed by 90%, but the person's <strong>real purchasing power</strong> is essentially unchanged.</p>
+<div class="pulse">The economic issue is not lower nominal wages. It is whether income falls faster than the cost of living.</div>
+<p>So if AI reduces a worker's income by 20% while reducing the relevant cost of living by 20% or more, the transition could be neutral or beneficial.</p>
+<p>That possibility should not be dismissed.</p>
+<p>But now consider a different order of magnitude.</p>
+<p>Income falls 50% while prices fall 20%.</p>
+<p>The household is poorer in real terms.</p>
+<p>Or income falls to zero because a job disappears and another does not replace it.</p>
+<p>A product becoming dramatically cheaper does not make it affordable to someone with no income.</p>
+
+<h2>Prices Will Not All Move Together</h2>
+<p>The neat thought experiment above assumes everything reprices proportionally.</p>
+<p>Real economies do not work that way.</p>
+<p>AI might make coding, translation, tutoring, legal research, design or customer support much cheaper while having far less immediate effect on the cost of scarce land, desirable housing, insurance, energy infrastructure, property taxes or medical treatment requiring physical facilities.</p>
+<p>Some prices could fall while others rise.</p>
+<p>And households have obligations that were established before the productivity shock.</p>
+<p>A mortgage does not automatically shrink because AI reduced the homeowner's salary.</p>
+<p>A student loan does not reprice because an entry-level professional job disappeared.</p>
+<p>A lease does not instantly adjust because the tenant's occupation became less valuable.</p>
+<div class="question">A rapid decline in labor income can collide with debts and obligations created in an economy built around higher labor income.</div>
+<p>This is why saying "AI will make things cheaper" is an important answer—but not a complete one.</p>
+
+<h2>Could Credit Fill the Gap?</h2>
+<p>For a while.</p>
+<p>Households can maintain spending by borrowing or drawing down savings when income temporarily falls.</p>
+<p>That is one of the ways modern economies smooth recessions and personal setbacks.</p>
+<p>But borrowing is not income.</p>
+<p>Credit moves purchasing power through time.</p>
+<p>It allows someone to consume today by promising repayment tomorrow.</p>
+<p>If the underlying income problem is temporary, that can work extremely well.</p>
+<p>If the underlying problem is permanent—if the economy structurally needs fewer humans—debt cannot indefinitely substitute for income without creating another instability.</p>
+
+<h2>Government Can Support Demand. But That Changes the Question.</h2>
+<p>Governments can replace lost private demand through spending, transfers, tax policy and other measures.</p>
+<p>Central banks can lower interest rates when conditions allow. Fiscal policy can support household income. Social insurance can prevent individual shocks from becoming collapses in consumption.</p>
+<p>Those mechanisms are important.</p>
+<p>But once government must systematically replace labor income in order to preserve purchasing power, we have already crossed into a different economic structure.</p>
+<p>The question is no longer whether automation affects income distribution.</p>
+<p>The question becomes how purchasing power should be distributed in an economy that may not need enough human labor to distribute it through wages.</p>
+<p>That is a solutions question, and this article is deliberately not trying to answer it yet.</p>
+<p>First we need to recognize the mechanism.</p>
+
+<h2>Exports Do Not Make the Global Problem Disappear</h2>
+<p>An individual country can also support production by selling to consumers abroad.</p>
+<p>That can be enormously important.</p>
+<p>But if AI-driven labor displacement eventually occurs across many countries, exporting merely moves the question geographically.</p>
+<div class="pulse">At the global level, there is no external planet of consumers waiting to absorb Earth's excess production.</div>
+<p>Someone, somewhere, must ultimately possess the purchasing power.</p>
+<p>This is one reason the AI transition cannot be understood solely as a competition among individual companies—or even individual countries.</p>
+<p>What appears rational for each participant can produce a system-wide problem when repeated at sufficient scale.</p>
+
+<h2>AI Does Not Have to Eliminate Every Job</h2>
+<p>The extreme version of this argument is easy to attack:</p>
+<p>"AI will take every job, nobody will have money, and the economy will collapse."</p>
+<p>That is not the claim.</p>
+<p>AI does not need to eliminate all employment for purchasing power to weaken materially.</p>
+<p>The International Monetary Fund has estimated that almost 40% of global employment is exposed to AI and about 60% in advanced economies. The IMF explicitly stresses that much of this exposure may involve complementing workers rather than replacing them, while another portion could reduce labor demand, wages or hiring.<sup><a href="#note-3">3</a></sup></p>
+<p>The relevant question is therefore one of degree.</p>
+<p>What happens if AI raises productivity 30% while labor income remains broadly intact?</p>
+<p>That may be extraordinarily beneficial.</p>
+<p>What happens if it raises productivity 30% while the economy needs 20% fewer workers?</p>
+<p>What if it needs 40% fewer?</p>
+<p>What if many remaining jobs pay less because a human working with AI can now do the work previously requiring several people?</p>
+<p>The answer cannot be inferred from the statement that "new jobs will appear."</p>
+<p>We need to know their number, compensation and timing.</p>
+
+<h2>There May Be a New Equilibrium</h2>
+<p>None of this means an AI-rich economy must remain broken forever.</p>
+<p>Human societies change institutions when old arrangements stop working.</p>
+<p>New jobs may emerge.</p>
+<p>Workweeks may shorten.</p>
+<p>Ownership may broaden.</p>
+<p>Income may become less tightly connected to employment.</p>
+<p>Prices may fall enormously.</p>
+<p>Governments may develop new mechanisms for maintaining purchasing power.</p>
+<p>Some combination may create a stable and prosperous post-automation equilibrium.</p>
+<p>But eventually finding a new equilibrium is not the same thing as experiencing a painless transition.</p>
+<div class="question">The risk is the valley between an economy organized around human labor and whatever system comes after it.</div>
+<p>If productive technology advances faster than the institutions that distribute purchasing power, the transition itself can be economically and politically destabilizing.</p>
+
+<div class="known"><div class="known-head">What we know / What we don't know yet</div><div class="known-grid"><div><h3>What we know</h3><p>Consumer spending is a very large component of the U.S. economy. Labor income remains a major source of household purchasing power. Wealth concentrated among higher-income households produces less additional consumer spending per dollar than wealth held more broadly. AI is capable of affecting cognitive as well as routine work, and major economic institutions expect substantial labor-market exposure.</p></div><div><h3>What we don't know yet</h3><p>We do not know how much AI will reduce labor demand, how quickly prices will fall, how much new human work will emerge, how productivity gains will be distributed, how much government policy will offset lost income, or the threshold at which reduced purchasing power becomes a systemic rather than ordinary labor-market problem.</p></div></div></div>
+
+<h2>The Hidden Constraint</h2>
+<p>For most of industrial history, the central economic constraint appeared to be production.</p>
+<p>How do we grow more food?</p>
+<p>How do we manufacture more goods?</p>
+<p>How do we move them faster?</p>
+<p>How do we reduce the labor required to produce them?</p>
+<p>Artificial intelligence may help solve those problems to a degree previous generations could barely imagine.</p>
+<p>And that is precisely why another constraint deserves attention.</p>
+<div class="pulse">An economy does not need only the capacity to produce. It needs a durable mechanism that gives people a claim on what is produced.</div>
+<p>For generations, employment and wages have performed much of that function.</p>
+<p>If AI substantially weakens the connection between human labor and production, we should not assume that the purchasing-power side of the system automatically repairs itself.</p>
+<p>The machines may work.</p>
+<p>The products may be excellent.</p>
+<p>The cost of production may collapse.</p>
+<p>Corporate efficiency may reach levels once considered impossible.</p>
+<p>And yet the system can still encounter a basic question:</p>
+<div class="question">Who are the customers?</div>
+<p>That is the risk of production without consumption.</p>
+
+<section class="notes"><h2>Endnotes &amp; sources</h2><ol>
+<li id="note-1">U.S. Bureau of Economic Analysis, <a href="https://apps.bea.gov/scb/issues/2025/07-july/0725-gdp-economy.htm" target="_blank" rel="noopener">GDP and the Economy: Third Estimates for the First Quarter of 2025</a>, July 2025. BEA reported personal consumption expenditures at 68.3% of current-dollar GDP in 2025 Q1.</li>
+<li id="note-2">Samara Beach, William Gamber and Patrick Moran, Board of Governors of the Federal Reserve System, <a href="https://www.federalreserve.gov/econres/notes/feds-notes/wealth-heterogeneity-and-consumer-spending-20250805.html" target="_blank" rel="noopener">Wealth Heterogeneity and Consumer Spending</a>, August 5, 2025.</li>
+<li id="note-3">International Monetary Fund, <a href="https://www.imf.org/en/blogs/articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity" target="_blank" rel="noopener">AI Will Transform the Global Economy. Let's Make Sure It Benefits Humanity</a>, January 14, 2024.</li>
+</ol></section>
+</div></article>
+<section class="explore"><div class="wrap"><h2>Keep exploring</h2><p>This essay develops the demand side of the flagship thesis. The next question is ownership: if labor becomes less necessary to production, who receives the income and claims on that production?</p><a href="/the-paradox-of-automation.html">Read the flagship →</a><a href="/articles.html">Browse all articles →</a></div></section>
+<section class="newsletter" id="subscribe"><div class="wrap newsletter-grid"><div><h2>Follow the investigation.</h2><p>New essays, evidence, counterarguments and developments as we test the Paradox of Automation.</p></div><form name="subscribe" method="POST" data-netlify="true" action="/thanks.html"><input type="hidden" name="form-name" value="subscribe"/><input type="hidden" name="consent_version" value="POA-email-v1"/><input type="hidden" name="signup_source" value="production-without-consumption"/><div class="form-row"><input type="email" name="email" aria-label="Email address" placeholder="Email address" required/><button type="submit">Subscribe</button></div><label class="consent"><input type="checkbox" name="consent" value="yes" required/> <span>I agree to receive new essays and updates from Paradox of Automation by email. I can unsubscribe at any time.</span></label></form></div></section>
+<section class="about"><div class="wrap about-grid"><h3>About Paradox of Automation</h3><p>Paradox of Automation examines a simple but consequential possibility: automation can increase productive capacity while weakening the labor income that historically allows people to purchase what the economy produces. The project tests the thesis against historical evidence, current labor-market data, counterarguments and possible responses.</p></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Paradox of Automation · Philos Kim</span><span><a href="/articles.html">Articles</a> · <a href="/privacy.html">Privacy</a> · <a href="mailto:hello@paradoxofautomation.com">hello@paradoxofautomation.com</a></span></div></footer><div class="version">SITE V1.10</div>
+<script src="/translate.js?v=3" defer></script>
+</body>
+</html>
