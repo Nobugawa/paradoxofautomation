@@ -45,7 +45,16 @@ footer{position:fixed;right:12px;bottom:10px;font:700 .67rem ui-monospace,monosp
 <script>
 let DATA={nodes:[]}; const $=s=>document.querySelector(s); let viewMode=localStorage.getItem('poaKgView')||'compact'; const openNodes=new Set();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-async function load(){const r=await fetch('/knowledge-graph/data/knowledge-graph.json',{cache:'no-store'}); DATA=await r.json(); setup(); setView(viewMode,false); render();}
+async function load(){
+ const base=await fetch('/knowledge-graph/data/knowledge-graph.json',{cache:'no-store'}).then(r=>r.json());
+ let ext={nodes:[]};
+ try{const r=await fetch('/knowledge-graph/data/robotaxi-extension.json',{cache:'no-store'}); if(r.ok) ext=await r.json();}catch(e){}
+ const merged=[...(base.nodes||[]),...(ext.nodes||[])];
+ const byId=new Map(); merged.forEach(n=>byId.set(n.id,n));
+ DATA={...base,nodes:[...byId.values()],version:ext.version||base.version,updated:ext.updated||base.updated};
+ DATA.nodeCount=DATA.nodes.length;
+ setup(); setView(viewMode,false); render();
+}
 function setup(){ $('#meta').textContent=`${DATA.version} · Updated ${DATA.updated} · ${DATA.nodeCount} nodes`; $('#footerVersion').textContent=`POA KG · ${DATA.version}`;
  const groups=[...new Set(DATA.nodes.map(n=>n.group))].sort(); groups.forEach(v=>$('#group').insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));
  const statuses=[...new Set(DATA.nodes.map(n=>n.status))].sort(); statuses.forEach(v=>$('#status').insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));
