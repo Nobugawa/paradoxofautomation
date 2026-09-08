@@ -1,0 +1,115 @@
+{
+  "version": "V1.4",
+  "updated": "September 7, 2026",
+  "nodes": [
+    {
+      "id": "POA-068",
+      "title": "Autonomous Transportation as Physical AI",
+      "type": "Physical Automation Evidence",
+      "status": "Active",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "Robotaxis and autonomous trucks are among the most advanced large-scale moves of AI from the digital realm into physical labor substitution. Driving is unusually automatable because roads, vehicles, maps, traffic rules, communications, and positioning infrastructure create a far more structured environment than site-specific skilled trades such as plumbing, electrical work, or repair.",
+      "related": ["POA-005", "POA-012", "POA-017", "POA-042", "POA-069", "POA-070", "POA-071", "RES-004"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-069",
+      "title": "E-Immigrant / Nonhuman Labor Entrant",
+      "type": "Framing Analogy",
+      "status": "Supporting",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "A digital or robotic system can be modeled economically as a nonhuman entrant into the labor market when it performs productive work previously exchanged for human wages. Unlike a human immigrant, who normally spends a substantial share of income in the host economy even when some earnings are remitted abroad, the machine receives no household wage and creates no household consumption demand. Use as a provocative economic analogy, not a literal equivalence between people and machines.",
+      "related": ["POA-003", "POA-040", "POA-041", "POA-042", "POA-068", "POA-074"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-070",
+      "title": "GPS/GNSS as Autonomous-Transport Enabling Infrastructure",
+      "type": "Technology Enabler",
+      "status": "Core",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "Satellite positioning and navigation are foundational enabling technologies for autonomous transportation. Practical systems combine GPS/GNSS with cameras, radar/lidar, inertial navigation, wheel odometry, digital maps, cellular communications, and other redundancy. Decades of navigation and road-data infrastructure helped make driving automatable earlier than many unstructured skilled physical jobs.",
+      "related": ["POA-005", "POA-017", "POA-068", "POA-072", "RES-004"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-071",
+      "title": "Autonomous Trucking Labor-Income Exposure",
+      "type": "Economic Risk",
+      "status": "Core",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "Autonomous trucking may have a larger aggregate labor-income effect than robotaxis because heavy-truck driving employs a large workforce at materially higher typical pay. The economic exposure is not only the number of jobs but the household spending, taxes, retirement contributions, and local demand supported by those wages. Track all employment, wage, fleet, and deployment metrics with explicit as-of dates.",
+      "related": ["POA-003", "POA-040", "POA-050", "POA-068", "POA-069", "RES-004"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-072",
+      "title": "Hidden Secondary Functions of Labor",
+      "type": "Unlean Thinking / Systems Risk",
+      "status": "Supporting",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "A worker often performs valuable secondary functions that are not separately priced in the wage calculation. A truck driver is not only a steering input but also a mobile custodian, anomaly detector, witness, security presence, and judgment layer. Removing the driver can create new cybersecurity, remote-operations, cargo-security, insurance, recovery, monitoring, anti-spoofing, and incident-response costs. Local labor-cost savings can therefore create system costs elsewhere.",
+      "related": ["POA-055", "POA-058", "POA-068", "POA-070", "POA-071", "RES-004"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-073",
+      "title": "Automation Rents, Entry, and Robotaxi Overcapacity",
+      "type": "Economic Mechanism",
+      "status": "Core",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "Early robotaxi operators may earn supernormal returns while autonomous vehicles, regulatory permission, or service coverage remain scarce. Those profits invite fleet entry and encourage manufacturers to supply more vehicles. As capacity expands, utilization and fares can fall, eventually competing away much of the early capital windfall. The labor requirement can remain permanently lower even after extraordinary owner profits disappear, leaving very high productive capacity, low unit costs, and weakened labor-income generation.",
+      "related": ["POA-015", "POA-023", "POA-038", "POA-040", "POA-041", "POA-043", "POA-068", "VIS-005"],
+      "group": "Concepts"
+    },
+    {
+      "id": "POA-074",
+      "title": "Immigration vs Automation Job-Protection Asymmetry",
+      "type": "Political-Economic Framing",
+      "status": "Supporting",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "Political debate often treats human immigration, offshoring, and trade as threats to domestic jobs while discussion of autonomous labor substitution is more heavily framed around safety, innovation, and competitiveness. The comparison raises a policy question: if displacement of domestic labor matters when the competing worker is foreign, why should the labor-income effect disappear from consideration when the competing productive agent is owned capital? Organized labor and some lawmakers do raise automation-related job concerns, so this is an asymmetry of emphasis rather than an absence of opposition.",
+      "related": ["POA-029", "POA-030", "POA-033", "POA-056", "POA-066", "POA-069", "POA-071"],
+      "group": "Concepts"
+    },
+    {
+      "id": "RES-004",
+      "title": "Robotaxi & Autonomous Trucking Tracker",
+      "type": "Research",
+      "status": "Active",
+      "created": "September 7, 2026",
+      "updated": "September 7, 2026",
+      "summary": "Track commercial robotaxi and autonomous-truck deployments, fleet scale, geographic expansion, fare economics, driverless miles/rides, regulatory changes, safety performance, security incidents, labor displacement, wage exposure, and operator economics. Candidate companies include Waymo, Tesla, Zoox, Baidu Apollo Go, Pony.ai, WeRide, Gatik, Kodiak, Aurora, and other material entrants. Every time-sensitive metric must include an as-of date and source date.",
+      "related": ["POA-011", "POA-012", "POA-068", "POA-070", "POA-071", "POA-072", "POA-073", "POA-074"],
+      "group": "Research"
+    },
+    {
+      "id": "VIS-005",
+      "title": "Labor to Automation Rents to Capital Competition",
+      "type": "Visual",
+      "status": "Planned",
+      "created": "September 7, 2026",
+      "summary": "Visual sequence: human labor income -> early automation removes wage cost -> early owners capture oversized rents -> high returns attract fleet entry -> manufacturers expand supply -> automated capacity competes with automated capacity -> fares and owner returns compress while the displaced wage mechanism does not automatically return.",
+      "related": ["POA-038", "POA-040", "POA-043", "POA-073"],
+      "group": "Visuals"
+    },
+    {
+      "id": "CHAT-001",
+      "title": "Robotaxi Evidence, E-Immigrant, Trucking, GPS, Security & Overcapacity",
+      "type": "Source Chat",
+      "status": "Captured",
+      "created": "September 7, 2026",
+      "eventDate": "September 5-7, 2026",
+      "summary": "Source discussion establishing the autonomous-transportation branch: current robotaxi development, physical-AI significance, E-immigrant framing, autonomous trucking wage exposure, GPS/GNSS enabling role, cargo-theft and cybersecurity secondary costs, and the progression from early automation rents to capacity oversupply and capital competition.",
+      "related": ["POA-068", "POA-069", "POA-070", "POA-071", "POA-072", "POA-073", "POA-074", "RES-004", "VIS-005"],
+      "group": "Chats"
+    }
+  ]
+}
