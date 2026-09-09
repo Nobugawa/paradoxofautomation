@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Why Nobody Will Hit the Brakes on AI | Paradox of Automation</title>
+<meta name="description" content="Why companies, investors, workers and countries may keep accelerating AI even when restraint could be rational for society as a whole." />
+<meta name="author" content="Philos Kim" />
+<link rel="canonical" href="https://paradoxofautomation.com/why-nobody-will-hit-the-brakes-on-ai.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Why Nobody Will Hit the Brakes on AI" />
+<meta property="og:description" content="Some people may not think the brakes are needed. Others may believe they cannot safely use them alone." />
+<meta property="og:url" content="https://paradoxofautomation.com/why-nobody-will-hit-the-brakes-on-ai.html" />
+<meta property="og:site_name" content="Paradox of Automation" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#0e0f11" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<style>
+:root{--paper:#f4f0e7;--ink:#0e0f11;--muted:#666158;--line:#c8c0b2;--signal:#d64b2a;--signal-dark:#9f3118;--white:#fffdf8;--max:1120px;--read:760px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(rgba(14,15,17,.026) 1px,transparent 1px),linear-gradient(90deg,rgba(14,15,17,.022) 1px,transparent 1px),var(--paper);background-size:28px 28px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.reading{width:min(calc(100% - 40px),var(--read));margin:auto}
+header{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(14,15,17,.16);background:rgba(244,240,231,.92);backdrop-filter:blur(12px)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:block;text-decoration:none;line-height:0;flex:0 1 520px}.brand img{display:block;width:min(100%,520px);max-height:68px;object-fit:contain;object-position:left center}nav{display:flex;gap:20px;align-items:center;font-size:.86rem}nav a{text-decoration:none}.subscribe{background:var(--ink);color:var(--paper);padding:8px 13px;font-weight:700}
+.hero{padding:70px 0 54px;border-bottom:1px solid var(--line)}.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:800;color:var(--signal-dark);margin-bottom:20px}.eyebrow:before{content:"";width:34px;height:3px;background:var(--signal)}h1{font:700 clamp(2.8rem,6.7vw,6.1rem)/.95 Georgia,"Times New Roman",serif;letter-spacing:-.05em;margin:0 0 28px}.deck{max-width:850px;font:clamp(1.2rem,2.2vw,1.55rem)/1.5 Georgia,serif;color:#34322e;margin:0 0 32px}.meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.79rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.tag{border:1px solid var(--line);padding:5px 8px}
+.thesis{background:var(--ink);color:var(--paper);padding:56px 0}.thesis-grid{display:grid;grid-template-columns:.8fr 2fr;gap:50px}.thesis-label{text-transform:uppercase;letter-spacing:.15em;font-weight:800;font-size:.72rem;color:#d6cfc2}.thesis blockquote{margin:0;font:clamp(1.8rem,3.6vw,3.15rem)/1.12 Georgia,serif;letter-spacing:-.025em}.thesis blockquote em{color:#ff7657;font-style:normal}
+article{padding:70px 0 46px}article h2{font:700 clamp(1.9rem,4vw,3rem)/1.08 Georgia,serif;letter-spacing:-.025em;margin:2.1em 0 .75em}article p{font:1.25rem/1.82 Georgia,serif;margin:0 0 1.55em;color:#24231f}article p.lead:first-letter{float:left;font-size:4.5rem;line-height:.82;padding-right:10px;padding-top:9px;font-weight:700;color:var(--signal-dark)}sup a{text-decoration:none;color:var(--signal-dark);font:800 .72rem system-ui}.pulse{margin:50px 0;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);padding:24px 0 26px;font:700 clamp(1.45rem,3vw,2.15rem)/1.3 Georgia,serif}.question{margin:48px 0;padding:26px 30px;border-left:5px solid var(--signal);background:rgba(255,255,255,.35);font:700 clamp(1.4rem,2.5vw,1.9rem)/1.35 Georgia,serif}.known{margin:56px 0;border:1px solid var(--ink);background:var(--white)}.known-head{padding:14px 20px;background:var(--ink);color:var(--paper);text-transform:uppercase;letter-spacing:.13em;font-weight:900;font-size:.75rem}.known-grid{display:grid;grid-template-columns:1fr 1fr}.known-grid>div{padding:24px}.known-grid>div:first-child{border-right:1px solid var(--ink)}.known h3{font:700 1.45rem/1.1 Georgia,serif;margin:0 0 12px}.known p{font:1rem/1.6 system-ui;margin:0;color:#403c36}.notes{border-top:2px solid var(--ink);margin-top:70px;padding-top:26px}.notes h2{font:800 .78rem/1 system-ui;text-transform:uppercase;letter-spacing:.14em;margin:0 0 18px}.notes ol{padding-left:22px;margin:0}.notes li{font:.92rem/1.6 system-ui;color:#4f4b44;margin:0 0 13px}.notes a{color:var(--signal-dark)}
+.explore{padding:46px 0 62px;background:#ebe5d9;border-top:1px solid var(--line)}.explore h2{font:700 clamp(1.9rem,4vw,3rem)/1.05 Georgia,serif;margin:0 0 14px}.explore p{max-width:720px;color:#403c36}.explore a{display:inline-block;margin:8px 6px 0 0;text-decoration:none;background:var(--ink);color:var(--paper);padding:11px 15px;font-weight:800}.newsletter{background:var(--signal);color:#fff9ef;padding:64px 0}.newsletter-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}.newsletter h2{font:clamp(2.4rem,5vw,4.3rem)/1 Georgia,serif;margin:0 0 18px}.newsletter p{margin:0}.form-row{display:flex;gap:8px}input[type=email]{flex:1;min-width:0;border:2px solid #fff9ef;background:transparent;color:#fff;font:600 1rem system-ui;padding:14px}button{border:2px solid var(--ink);background:var(--ink);color:#fff;font:800 .9rem system-ui;padding:14px 20px}.consent{display:flex;gap:9px;margin-top:12px;font-size:.8rem}.about{padding:48px 0;background:#17181a;color:#dcd7cc}.about-grid{display:grid;grid-template-columns:.75fr 2fr;gap:50px}.about h3{margin:0;font:700 1rem Georgia,serif;color:#fff}.about p{margin:0;max-width:760px;font-size:.93rem}footer{background:#0e0f11;color:#928c82;padding:25px 0;font-size:.76rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#c8c2b6}.version{position:fixed;right:10px;bottom:8px;font:700 10px/1 ui-monospace,monospace;color:#746e64;background:rgba(244,240,231,.92);border:1px solid rgba(14,15,17,.15);padding:5px 7px}
+@media(max-width:780px){.nav{min-height:68px}.brand{max-width:305px}nav a:not(.subscribe){display:none}.thesis-grid,.newsletter-grid,.about-grid,.known-grid{grid-template-columns:1fr}.known-grid>div:first-child{border-right:0;border-bottom:1px solid var(--ink)}.form-row{flex-direction:column}button{width:100%}article p{font-size:1.14rem}.version{position:static;display:block;width:max-content;margin:14px 20px 10px auto;background:transparent;color:#928c82;border-color:#343537}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why Nobody Will Hit the Brakes on AI","author":{"@type":"Person","name":"Philos Kim"},"publisher":{"@type":"Organization","name":"Paradox of Automation"},"datePublished":"2026-09-08","dateModified":"2026-09-08","mainEntityOfPage":"https://paradoxofautomation.com/why-nobody-will-hit-the-brakes-on-ai.html"}</script>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="/"><img src="/media/poa-logo.png" alt="Paradox of Automation — The Human Equation" /></a><nav><a href="/">Home</a><a href="/articles.html">Articles</a><a class="subscribe" href="#subscribe">Subscribe</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Systemic Risk · Essay</div><h1>Why Nobody Will Hit the Brakes on AI</h1><p class="deck">The people accelerating artificial intelligence do not have to be reckless, malicious or unintelligent. They may be caught in a system that rewards acceleration, punishes restraint and increasingly encourages everyone to think in the same direction.</p><div class="meta"><strong>By Philos Kim</strong><span>September 8, 2026</span><span class="tag">Competition · Herding · Governance</span></div></div></section>
+<section class="thesis"><div class="wrap thesis-grid"><div class="thesis-label">The problem</div><blockquote>The danger is not simply that nobody can see the brakes. Some of the people driving may not believe brakes are needed. And those who do may believe they <em>cannot safely use them alone.</em></blockquote></div></section>
+<article><div class="reading">
+<p class="lead">A friend of mine gets angry when she sees someone driving recklessly.</p>
+<p>Someone is tailgating a tractor-trailer at 70 miles per hour. Someone cuts across three lanes without signaling. Someone follows another car so closely that a sudden stop would leave almost no time to react.</p>
+<p>Her reaction is often: <em>What an asshole.</em></p>
+<p>Mine is a little different.</p>
+<div class="pulse">They are just driving stupid.</div>
+<p>That distinction matters.</p>
+<p>The person behind the wheel might be a brilliant doctor. A gifted engineer. A successful attorney. A respected professor. A chief executive officer. A senator.</p>
+<p>They might be extraordinarily capable in the part of life they know well.</p>
+<p>And still be a terrible driver.</p>
+<p>The person tailgating a truck probably does not want to be decapitated if the truck stops suddenly.</p>
+<p>The problem is not intent.</p>
+<p>The problem is judgment.</p>
+<div class="question">Bad judgment does not require bad character.</div>
+<p>And that may be one of the most important things to understand about artificial intelligence.</p>
+<p>The people making decisions about AI do not have to want unemployment, falling labor income, weakened consumer demand, fiscal stress or political instability.</p>
+<p>They do not even have to be generally unintelligent.</p>
+<p>They only have to misunderstand <strong>this particular system</strong>.</p>
+
+<h2>Intelligence Is Not the Same as Systems Understanding</h2>
+<p>We often speak about intelligent people as though intelligence transfers automatically from one subject to another.</p>
+<p>It does not.</p>
+<p>A great surgeon understands medicine better than nearly everyone else. That does not make the surgeon an expert on monetary policy.</p>
+<p>A brilliant software engineer may understand machine learning at extraordinary depth and know little about labor economics.</p>
+<p>A chief executive may understand competitive strategy, operations and finance and have spent almost no time considering what happens to aggregate consumer demand if thousands of other companies make exactly the same labor-saving decisions.</p>
+<p>A politician may be exceptionally skilled at campaigning, negotiation, fundraising and coalition building while having little expertise in artificial intelligence, economics, robotics, energy systems or the interaction among all of them.</p>
+<div class="pulse">Domain competence is not systems competence.</div>
+<p>This is not an insult.</p>
+<p>No human being can be an expert in everything.</p>
+<p>The problem appears when people with deep expertise in one part of a system have enough power to alter many other parts of it.</p>
+<p>AI is not merely a software product.</p>
+<p>If it becomes capable of performing a substantial portion of the work currently performed by humans, its effects can travel through employment, wages, consumption, housing, debt, retirement systems, tax revenue, social insurance, corporate profits, financial markets and political stability.</p>
+<p>Knowing how to build an AI model does not mean knowing how all of those systems will react to widespread adoption of it.</p>
+<p>Knowing how to use AI to reduce a company's labor costs does not mean knowing what happens when millions of other employers do the same thing.</p>
+<p>That is where individual intelligence can run into collective stupidity.</p>
+
+<h2>Sometimes Crowds Really Are Wise</h2>
+<p>There is a famous idea known as the <strong>wisdom of crowds</strong>.</p>
+<p>Under the right conditions, many people making independent judgments can collectively arrive at an answer more accurate than most of the individuals in the group.</p>
+<p>But there is an important condition buried inside that idea:</p>
+<div class="question">The judgments need to retain meaningful independence.</div>
+<p>If one person estimates too high and another too low, their errors can partly cancel.</p>
+<p>Different people bring different information, experiences and assumptions to the problem.</p>
+<p>That diversity is part of what makes the crowd useful.</p>
+<p>Research on collective judgment shows why this can break down. Social learning can improve decisions in some settings, but under uncertainty larger groups can also copy one another and herd in the same direction.<sup><a href="#note-1">1</a></sup></p>
+<p>That is when the <strong>wisdom of crowds can become the herding of crowds</strong>.</p>
+<p>Financial markets have demonstrated this repeatedly.</p>
+<p>Highly intelligent people participated in the dot-com bubble.</p>
+<p>Highly intelligent people participated in the housing bubble.</p>
+<p>Highly intelligent people made loans that later looked absurd.</p>
+<p>Highly intelligent people bought assets at prices that only made sense if somebody else would continue paying even more.</p>
+<p>The existence of intelligent participants did not make the collective outcome intelligent.</p>
+<p>Why?</p>
+<p>Because people were watching one another.</p>
+
+<h2>The Crowd Can Teach Itself That the Crowd Must Be Right</h2>
+<p>Imagine one chief executive announces that artificial intelligence will allow the company to operate with 20% fewer employees.</p>
+<p>The stock rises.</p>
+<p>Another chief executive is asked by analysts:</p>
+<p>Why aren't <em>you</em> doing this?</p>
+<p>A consulting firm publishes a report about enormous AI productivity gains.</p>
+<p>Boards begin asking management teams about their AI strategies.</p>
+<p>Investors begin favoring companies that can tell the most compelling AI story.</p>
+<p>Venture capital pours into companies promising to automate expensive human work.</p>
+<p>Competitors see those investments and accelerate their own programs.</p>
+<p>Employees begin using AI because they fear workers who use it will outperform those who do not.</p>
+<p>Governments see other countries investing and conclude that they must invest even faster.</p>
+<p>Eventually a strange thing happens.</p>
+<p>Everyone can point to everyone else as evidence that the strategy must make sense.</p>
+<p>But the observations are no longer independent.</p>
+<p>Company B is partly responding to Company A.</p>
+<p>Investor C is responding to A and B.</p>
+<p>Government D is responding to the investments of A, B and C.</p>
+<p>Then A looks at B, C and D and concludes that its original decision has been validated.</p>
+<p>The apparent consensus becomes partly self-referential.</p>
+<div class="pulse">This is how intelligent groups can develop correlated error.</div>
+<p>Everyone does not have to independently make the same mistake.</p>
+<p>They only have to start learning from one another's behavior faster than they question the assumptions underneath it.</p>
+
+<h2>It Takes Backbone to Go Against the Group</h2>
+<p>There is a reason people say someone has <strong>“no backbone.”</strong></p>
+<p>Going against a group is difficult.</p>
+<p>It is difficult socially.</p>
+<p>It is difficult professionally.</p>
+<p>And when money is involved, it can be extremely difficult economically.</p>
+<p>Suppose a chief executive genuinely believes that rapidly eliminating large numbers of jobs could eventually create serious social problems.</p>
+<p>What happens when competitors automate anyway?</p>
+<p>Suppose that executive voluntarily maintains a larger workforce.</p>
+<p>Labor costs remain higher.</p>
+<p>Margins are lower.</p>
+<p>Investors begin asking questions.</p>
+<p>Analysts downgrade the stock.</p>
+<p>The board wonders why competitors are producing more with fewer people.</p>
+<p>The chief executive may eventually be replaced by somebody willing to do what the market expects.</p>
+<div class="question">Personal restraint encounters institutional pressure.</div>
+<p>The same problem affects workers.</p>
+<p>A professional may dislike the prospect of AI eliminating junior jobs but still use AI aggressively because refusing to use it could make that worker less competitive.</p>
+<p>A union may negotiate limits or better transition terms at one company.</p>
+<p>But another company may automate more aggressively.</p>
+<p>And the problem becomes larger still when countries enter the picture.</p>
+
+<h2>What Happens When a Country Tries to Slow Down?</h2>
+<p>The United States government is not currently describing AI primarily as a technology that may need to be slowed.</p>
+<p>Its policy language is substantially about <strong>leadership, dominance, competitiveness and acceleration</strong>.</p>
+<p>President Trump's January 2025 executive order on artificial intelligence declared it U.S. policy to “sustain and enhance America's global AI dominance” in pursuit of human flourishing, economic competitiveness and national security. The order also directed agencies to identify policies that might obstruct that objective.<sup><a href="#note-2">2</a></sup></p>
+<p>The administration's subsequent AI Action Plan was literally titled <strong>“Winning the AI Race.”</strong> Its three main pillars were accelerating innovation, building American AI infrastructure and leading in international diplomacy and security.<sup><a href="#note-3">3</a></sup></p>
+<p>The language matters.</p>
+<p>This does not prove that the administration believes every possible use of automation is harmless.</p>
+<p>It does demonstrate what the central organizing objective is:</p>
+<div class="pulse">Move faster. Lead. Win. Do not allow barriers to surrender the advantage.</div>
+<p>And this problem is much larger than one president or one political party.</p>
+<p>Once artificial intelligence is perceived as a source of economic, technological and military power, any government considering restraint faces an obvious question:</p>
+<div class="question">What if the other country does not restrain itself?</div>
+<p>If the United States slows and China does not, what happens?</p>
+<p>If China slows and the United States does not, what happens?</p>
+<p>If Europe imposes restrictions while other regions accelerate, does investment migrate elsewhere?</p>
+<p>What happens to semiconductor leadership?</p>
+<p>What happens to advanced robotics?</p>
+<p>What happens to military capability?</p>
+<p>What happens to the companies building the next generation of technology?</p>
+<p>A country does not have to believe unlimited automation is desirable to fear being the only country that limits it.</p>
+
+<h2>Everyone Has a Gun, and Nobody Wants to Lower Theirs First</h2>
+<p>This begins to resemble an arms race.</p>
+<p>Imagine several people in a room, each holding a gun.</p>
+<p>Perhaps some of them would genuinely prefer that nobody had a gun.</p>
+<p>But putting yours down while everyone else keeps theirs pointed at you does not feel like peace.</p>
+<p>It feels like surrender.</p>
+<p>The safe outcome requires coordination.</p>
+<p>Everyone lowers the weapon together.</p>
+<p>Artificial intelligence creates a similar problem, with one important difference.</p>
+<div class="pulse">An all-out nuclear war has no winner.</div>
+<p>With AI, many participants believe there <strong>will</strong> be a winner.</p>
+<p>The company with the lowest costs.</p>
+<p>The investor who backed it early.</p>
+<p>The country with the strongest models.</p>
+<p>The military with the most advanced systems.</p>
+<p>The economy with the greatest productivity.</p>
+<p>The nation controlling critical infrastructure, chips, models and intellectual property.</p>
+<p>That belief makes the race harder to stop.</p>
+<p>Everyone is not merely afraid of losing.</p>
+<p>Someone expects to win.</p>
+
+<h2>This Is Chicken With a Prize at the End</h2>
+<p>The game of chicken normally involves two participants heading toward one another.</p>
+<p>The first one to turn is labeled the loser.</p>
+<p>But if neither turns, both may be destroyed.</p>
+<p>AI has elements of that structure.</p>
+<p>Companies know there may be economic and social risks from aggressive automation.</p>
+<p>Governments know powerful technologies can create unforeseen consequences.</p>
+<p>Workers know that eliminating too much human work could eventually undermine the income system on which much of the economy depends.</p>
+<p>But each participant sees an immediate reason not to be the one who moves first.</p>
+<p>And unlike ordinary chicken, there appears to be an enormous prize sitting at the other end of the road.</p>
+<p>Billions in profits.</p>
+<p>Trillions in market value.</p>
+<p>Military advantage.</p>
+<p>National prestige.</p>
+<p>Entire new industries.</p>
+<p>That prize changes behavior.</p>
+<div class="question">The rewards for acceleration are immediate and concentrated. The possible costs are delayed and distributed.</div>
+<p>A company captures the savings from eliminating a thousand jobs now.</p>
+<p>The broader economy may experience weaker purchasing power later.</p>
+<p>Investors capture appreciation now.</p>
+<p>Governments may face unemployment, tax-base erosion or social instability years later.</p>
+<p>Executives receive bonuses now.</p>
+<p>A different chief executive, administration or generation may inherit the consequences.</p>
+<p>This is precisely the kind of environment in which rational individual decisions can produce irrational collective outcomes.</p>
+
+<h2>Wall Street Does Not Need to Issue an Order</h2>
+<p>Nobody on Wall Street needs to hold a meeting and declare:</p>
+<p><em>Replace human beings.</em></p>
+<p>The incentive system can accomplish much of that without anyone giving the order.</p>
+<p>Suppose two otherwise similar companies exist.</p>
+<p>One develops technology that allows it to produce the same output with half the labor.</p>
+<p>Its costs fall.</p>
+<p>Margins increase.</p>
+<p>Earnings rise.</p>
+<p>Investors assign it a higher valuation.</p>
+<p>It can raise capital more cheaply.</p>
+<p>That capital funds more automation.</p>
+<p>Competitors must respond.</p>
+<div class="pulse">automation → lower labor costs → stronger margins → higher valuation → more available capital → more automation</div>
+<p>This is not conspiracy.</p>
+<p>It is incentive.</p>
+<p>And incentives can be more powerful than instructions.</p>
+
+<h2>Nobody Has to Be Evil</h2>
+<p>This is one of the recurring mistakes in how systemic problems are discussed.</p>
+<p>People search for a villain.</p>
+<p>The greedy chief executive.</p>
+<p>The reckless investor.</p>
+<p>The corrupt politician.</p>
+<p>The heartless technologist.</p>
+<p>Those people undoubtedly exist.</p>
+<p>But the Paradox of Automation does not require them.</p>
+<p>A decent chief executive can automate.</p>
+<p>A responsible investor can finance automation.</p>
+<p>A patriotic government can accelerate AI development.</p>
+<p>An ambitious worker can use AI to outperform coworkers.</p>
+<p>Each can make a defensible decision from inside his or her own lane.</p>
+<p>The problem emerges when millions of those decisions interact.</p>
+<p>That is why the reckless-driver analogy matters.</p>
+<p>The driver does not have to want a collision.</p>
+<p>The driver only has to misunderstand the risk.</p>
+<p>And if every car on the highway begins following one another too closely, the problem is no longer one bad driver.</p>
+<div class="question">It is a system with almost no margin for error.</div>
+
+<h2>The Fog Makes the Race More Dangerous</h2>
+<p>There is another reason this moment concerns me.</p>
+<p>We do not actually know the destination.</p>
+<p>We do not know how much human labor advanced AI and robotics will ultimately replace.</p>
+<p>We do not know how quickly new occupations will emerge.</p>
+<p>We do not know whether those jobs will exist in sufficient number.</p>
+<p>We do not know whether they will pay enough.</p>
+<p>We do not know whether falling prices will offset declining labor income.</p>
+<p>We do not know how ownership of productive AI capital will evolve.</p>
+<p>We do not know what happens to consumer demand at 10%, 20%, 30% or 40% structural displacement.</p>
+<p>We do not know how Social Security, tax revenue, housing debt, pensions and retirement savings respond if the labor share of income changes substantially.</p>
+<p>These are not minor details.</p>
+<p>They are part of the road ahead.</p>
+<p>Yet much of the prevailing policy and investment discussion treats faster deployment as the default objective.</p>
+<div class="pulse">That is like driving at increasing speed into fog because the cars beside you are accelerating too.</div>
+<p>Perhaps the road is perfectly clear beyond what we can see.</p>
+<p>Perhaps it leads somewhere extraordinary.</p>
+<p>But uncertainty about the cliff is not evidence that there is no cliff.</p>
+
+<div class="known"><div class="known-head">What we know / What we don't know yet</div><div class="known-grid"><div><h3>What we know</h3><p>Artificial intelligence is receiving enormous corporate, financial and governmental investment. Companies have strong incentives to reduce costs and increase productivity. Governments increasingly consider AI leadership strategically important. And collective judgment can become less reliable when decisions become highly correlated rather than independent.</p></div><div><h3>What we don't know yet</h3><p>We do not know the eventual scale of labor displacement, the speed of adaptation, whether new labor demand will replace lost labor demand quickly enough, whether societies can redesign income and institutions before serious disruption occurs, or how much restraint would be appropriate even if coordination were possible.</p></div></div></div>
+
+<h2>The Most Dangerous Consensus May Be the One Nobody Chose</h2>
+<p>There may never be a meeting at which world leaders collectively decide:</p>
+<p><em>Let us automate as much human labor as possible, as quickly as possible, and see what happens.</em></p>
+<p>There does not need to be one.</p>
+<p>The same outcome can emerge from thousands of individually understandable decisions.</p>
+<p>A company does not want to fall behind.</p>
+<p>An investor does not want to miss the next great company.</p>
+<p>A worker does not want to become obsolete.</p>
+<p>A politician does not want another country to dominate the technology.</p>
+<p>A country does not want to surrender strategic power.</p>
+<p>Everyone keeps accelerating.</p>
+<p>And then everyone looks around and sees everyone else accelerating.</p>
+<p>That observation becomes evidence that acceleration must be correct.</p>
+<p>This is where the wisdom of crowds can reverse itself.</p>
+<div class="pulse">Independent minds can produce collective intelligence. Correlated minds can produce collective error.</div>
+<p>The people involved can be brilliant.</p>
+<p>They can be decent.</p>
+<p>They can be acting rationally.</p>
+<p>And the system can still drive stupid.</p>
+<p>The danger is therefore larger than whether one chief executive, president, investor or technologist has enough courage to hit the brakes.</p>
+<div class="question">The danger is that some people do not believe braking is necessary, while those who do may believe they cannot afford to brake alone.</div>
+<p>If that is true, asking individual actors to exercise restraint will not be enough.</p>
+<p>The real question becomes much harder:</p>
+<div class="pulse">How do you slow a race when every participant believes slowing down first means losing?</div>
+<p>And perhaps an even more important question comes before it:</p>
+<div class="question">Shouldn't we understand where the road leads before everyone agrees, without ever really agreeing, to keep pressing the accelerator?</div>
+
+<section class="notes"><h2>Endnotes &amp; sources</h2><ol>
+<li id="note-1">Wataru Toyokawa, Andrew Whalen and Kevin N. Laland, <a href="https://www.nature.com/articles/s41562-018-0518-x" target="_blank" rel="noopener">Social learning strategies regulate the wisdom and madness of interactive crowds</a>, <em>Nature Human Behaviour</em>, 2019. The study found that uncertainty and larger groups can increase copying and the probability of herding.</li>
+<li id="note-2">The White House, <a href="https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/" target="_blank" rel="noopener">Removing Barriers to American Leadership in Artificial Intelligence</a>, Executive Order 14179, January 23, 2025.</li>
+<li id="note-3">The White House, <a href="https://www.whitehouse.gov/releases/2025/07/white-house-unveils-americas-ai-action-plan/" target="_blank" rel="noopener">White House Unveils America's AI Action Plan</a>, July 23, 2025.</li>
+</ol></section>
+</div></article>
+<section class="explore"><div class="wrap"><h2>Keep exploring</h2><p>This essay examines why the AI race can keep accelerating even when individual actors have reasons to worry about the consequences. The underlying economic mechanism is developed in the flagship essay and in Production Without Consumption.</p><a href="/the-paradox-of-automation.html">Read the flagship →</a><a href="/production-without-consumption.html">Production Without Consumption →</a><a href="/articles.html">Browse all articles →</a></div></section>
+<section class="newsletter" id="subscribe"><div class="wrap newsletter-grid"><div><h2>Follow the investigation.</h2><p>New essays, evidence, counterarguments and developments as we test the Paradox of Automation.</p></div><form name="subscribe" method="POST" data-netlify="true" action="/thanks.html"><input type="hidden" name="form-name" value="subscribe"/><input type="hidden" name="consent_version" value="POA-email-v1"/><input type="hidden" name="signup_source" value="why-nobody-will-hit-the-brakes-on-ai"/><div class="form-row"><input type="email" name="email" aria-label="Email address" placeholder="Email address" required/><button type="submit">Subscribe</button></div><label class="consent"><input type="checkbox" name="consent" value="yes" required/> <span>I agree to receive new essays and updates from Paradox of Automation by email. I can unsubscribe at any time.</span></label></form></div></section>
+<section class="about"><div class="wrap about-grid"><h3>About Paradox of Automation</h3><p>Paradox of Automation examines a simple but consequential possibility: automation can increase productive capacity while weakening the labor income that historically allows people to purchase what the economy produces. The project tests the thesis against historical evidence, current labor-market data, counterarguments and possible responses.</p></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Paradox of Automation · Philos Kim</span><span><a href="/articles.html">Articles</a> · <a href="/privacy.html">Privacy</a> · <a href="mailto:hello@paradoxofautomation.com">hello@paradoxofautomation.com</a></span></div></footer><div class="version">SITE V1.11</div>
+<script src="/translate.js?v=3" defer></script>
+</body></html>
