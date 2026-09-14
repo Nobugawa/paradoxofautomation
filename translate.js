@@ -3,18 +3,53 @@
   const isGoogleTranslated=host.endsWith('.translate.goog')||host.includes('translate.googleusercontent.com')||location.search.includes('_x_tr_');
   if(isGoogleTranslated) return;
 
-  // Article-specific presentation updates.
-  if(location.pathname==='/the-paradox-of-automation.html'||location.pathname==='/the-paradox-of-automation'){
-    const oldA='For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can become dangerous.';
-    const oldB='For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can become dangerous';
-    const replacement='For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can be detrimental to society.';
-
-    document.querySelectorAll('.thesis blockquote,.pulse').forEach(el=>{
-      const normalized=el.textContent.replace(/\s+/g,' ').trim();
-      if(normalized===oldA||normalized===oldB||normalized===replacement){
-        el.innerHTML='For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can be <em>detrimental to society.</em>';
-      }
+  const norm=s=>(s||'').replace(/\s+/g,' ').trim();
+  const replaceText=(selector,oldText,newText)=>{
+    [...document.querySelectorAll(selector)].forEach(el=>{
+      if(norm(el.textContent)===norm(oldText)) el.textContent=newText;
     });
+  };
+  const replaceHTML=(selector,oldText,newHTML)=>{
+    [...document.querySelectorAll(selector)].forEach(el=>{
+      if(norm(el.textContent)===norm(oldText)) el.innerHTML=newHTML;
+    });
+  };
+  const setMeta=(nameOrProperty,value)=>{
+    const el=document.querySelector(`meta[name="${nameOrProperty}"],meta[property="${nameOrProperty}"]`);
+    if(el) el.setAttribute('content',value);
+  };
+
+  // Site-wide clarity: POA uses production in the economic sense of goods and services,
+  // not only manufactured products.
+  document.querySelectorAll('.about p').forEach(p=>{
+    const text=norm(p.textContent).toLowerCase();
+    if(text.includes('paradox of automation')&&(text.includes('productive capacity')||text.includes('what the economy produces')||text.includes('labor income'))){
+      p.textContent='Paradox of Automation examines what happens when technologies reduce the human labor required to produce goods and provide services while also weakening the labor income people use to buy those goods and services. The project tests that possibility against history, current evidence, counterarguments and possible responses.';
+    }
+  });
+
+  const path=location.pathname.replace(/\/$/,'')||'/';
+
+  // Flagship: make explicit that "production" includes goods and services.
+  if(path==='/the-paradox-of-automation.html'||path==='/the-paradox-of-automation'){
+    const deck=document.querySelector('.hero .deck');
+    if(deck) deck.textContent='What happens when technology makes the production of goods and the delivery of services extraordinarily efficient, while also weakening the labor income people use to buy those goods and services?';
+    setMeta('description','What happens when technology makes the production of goods and the delivery of services extraordinarily efficient while weakening the labor income people use to buy them?');
+    setMeta('og:description','Automation can expand the economy’s capacity to produce goods and deliver services while weakening the labor income that historically gives consumers purchasing power.');
+
+    replaceHTML('.thesis blockquote,.pulse','For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can become dangerous.','For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can be <em>detrimental to society.</em>');
+    replaceHTML('.thesis blockquote,.pulse','For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can be detrimental to society.','For one firm, removing labor cost can be rational. For every firm simultaneously, removing labor income can be <em>detrimental to society.</em>');
+
+    replaceHTML('article p','The model is not intended to reproduce every detail of a modern economy. It only needs to contain two things we want to examine: production and purchasing power.','The model is not intended to reproduce every detail of a modern economy. It only needs to contain two things we want to examine: <strong>economic output—goods and services—and purchasing power.</strong>');
+    replaceHTML('.question','From the perspective of an individual business, wages are a cost. From the perspective of the economic system, wages are also one of the principal mechanisms through which consumers acquire the ability to purchase production.','From the perspective of an individual business, wages are a cost.<br><br>From the perspective of the economic system, wages are also one of the principal mechanisms through which consumers acquire the ability to purchase the goods and services the economy produces.');
+
+    const buyIt=[...document.querySelectorAll('article p')].find(p=>norm(p.textContent)==='Someone must also be able to buy it.');
+    if(buyIt&&!document.querySelector('.poa-service-output-example')){
+      const extra=document.createElement('p');
+      extra.className='poa-service-output-example';
+      extra.innerHTML='The same principle applies to services. A law firm may become capable of producing far more legal analysis, a medical system may process much more diagnostic work, or a software company may generate far more code. That additional capacity becomes economically valuable only when someone ultimately wants and can pay for the service.';
+      buyIt.insertAdjacentElement('afterend',extra);
+    }
 
     const problemParagraph=[...document.querySelectorAll('article p')].find(p=>p.textContent.trim()==='And now the island has a problem.');
     if(problemParagraph&&!document.querySelector('.feedback-visual')){
@@ -26,17 +61,39 @@
       figure.innerHTML='<img src="/media/paradox-feedback-loop.png" width="1448" height="1086" loading="lazy" alt="The Paradox of Automation feedback loop: firms automate to cut costs, fewer workers are needed, labor income and purchasing power fall, consumers buy less, and demand weakens for the whole economy."><figcaption>A simplified feedback loop. The outcome depends on scale, prices, new jobs, ownership and policy.</figcaption>';
       problemParagraph.insertAdjacentElement('afterend',figure);
     }
-
-    const version=document.querySelector('.version');
-    if(version&&version.textContent.trim()==='SITE V1.8') version.textContent='SITE V1.9';
   }
 
-  if(location.pathname==='/production-without-consumption.html'||location.pathname==='/production-without-consumption'){
-    const thesis=[...document.querySelectorAll('.thesis blockquote')].find(el=>el.textContent.replace(/\s+/g,' ').trim()==='Productive capacity and purchasing power are not the same thing. AI could expand one while weakening the other.');
+  // Production Without Consumption: define production broadly and balance physical and service examples.
+  if(path==='/production-without-consumption.html'||path==='/production-without-consumption'){
+    const deck=document.querySelector('.hero .deck');
+    if(deck) deck.textContent='What happens when the economy becomes extraordinarily good at producing goods and delivering services, but increasingly weak at distributing the purchasing power needed to buy them?';
+    setMeta('description','What happens if AI lets the economy produce more goods and deliver more services with far less human labor, while the income needed to buy them weakens?');
+    setMeta('og:description','Productive capacity in goods and services is not the same thing as purchasing power. AI could expand one while weakening the other.');
+
+    const lead=[...document.querySelectorAll('article p')].find(p=>norm(p.textContent)==='Imagine an economy that can produce almost anything its people need.');
+    if(lead&&!document.querySelector('.poa-production-definition')){
+      const definition=document.createElement('p');
+      definition.className='poa-production-definition';
+      definition.innerHTML='<strong>Here, production means economic output broadly—not only manufactured products. It includes food and physical goods, but also transportation, healthcare, legal work, software, financial services, entertainment and other services.</strong>';
+      lead.insertAdjacentElement('afterend',definition);
+    }
+
+    replaceText('article h2','A Product Is Not a Sale','Output Is Not Demand');
+    replaceText('article p','Producing something and selling it are two different events.','Producing a good or delivering a service and finding a paying customer are two different events.');
+
+    const tv=[...document.querySelectorAll('article p')].find(p=>norm(p.textContent).startsWith('A warehouse containing one million televisions represents productive success only in a physical sense.'));
+    if(tv&&!document.querySelector('.poa-service-demand-example')){
+      const extra=document.createElement('p');
+      extra.className='poa-service-demand-example';
+      extra.textContent='The same is true of services. The ability to generate ten times as much legal analysis, software, financial research or diagnostic work does not by itself create ten times as many customers able and willing to pay for it.';
+      tv.insertAdjacentElement('afterend',extra);
+    }
+
+    const thesis=[...document.querySelectorAll('.thesis blockquote')].find(el=>norm(el.textContent)==='Productive capacity and purchasing power are not the same thing. AI could expand one while weakening the other.');
     if(thesis) thesis.innerHTML='Productive capacity and purchasing power are not the same thing. AI could expand one while <em>weakening the other.</em>';
 
     const oldText='An economy does not need only the capacity to produce. It needs a durable mechanism that gives people a claim on what is produced.';
-    const target=[...document.querySelectorAll('.pulse')].find(el=>el.textContent.replace(/\s+/g,' ').trim()===oldText);
+    const target=[...document.querySelectorAll('.pulse')].find(el=>norm(el.textContent)===oldText);
     if(target){
       const replacement=document.createElement('div');
       replacement.className='human-purchasing-power';
@@ -47,6 +104,35 @@
       target.replaceWith(replacement);
     }
   }
+
+  // Missing First Rung: avoid making "produce" sound like manufacturing output.
+  if(path==='/the-missing-first-rung.html'||path==='/the-missing-first-rung'){
+    replaceText('article p','Watch how many people companies need to produce a given amount of output.','Watch how many people companies need to perform a given amount of work or generate a given amount of output.');
+  }
+
+  // 1960s preparedness essay: distinguish the broader economic meaning of production
+  // and explain why AI reaches into the service and cognitive sectors that absorbed earlier displacement.
+  if(path==='/we-saw-the-automation-risk-60-years-ago.html'||path==='/we-saw-the-automation-risk-60-years-ago'){
+    replaceText('article p','They argued that the industrial economy relied heavily upon an “income-through-jobs link.” People participated in production through their labor, received income for that labor, and then used that income to purchase what the economy produced.','They argued that the industrial economy relied heavily upon an “income-through-jobs link.” People participated in the economy through their labor—making goods, providing services, processing information and performing professional work. They received income for that labor and then used that income to buy the goods and services the economy produced.');
+    replaceText('article p','If machines increasingly took over production, they asked, what would replace the mechanism that distributed purchasing power to consumers?','If machines increasingly performed work that had provided people with income, they asked, what would replace the mechanism that distributed purchasing power to consumers?');
+
+    const concernHeading=[...document.querySelectorAll('article h2')].find(h=>norm(h.textContent)==='The Concern Never Completely Disappeared');
+    if(concernHeading&&!document.querySelector('.poa-escape-route')){
+      const section=document.createElement('div');
+      section.className='poa-escape-route';
+      section.innerHTML='<h2>The Escape Route May Be Different This Time</h2><p>There is another reason the historical comparison may now be less reassuring.</p><p>Earlier mechanization eliminated enormous amounts of agricultural and industrial labor, but expanding service and professional sectors absorbed much of the workforce. Millions of people moved broadly from farms to factories and eventually into offices, healthcare, education, finance, engineering, law, technology and other service work.</p><p>Artificial intelligence may be different because it is increasingly capable of performing parts of the <strong>cognitive and service work that became the refuge from earlier automation.</strong></p><p>That does not mean doctors, lawyers, engineers, programmers or accountants simply disappear. AI does not have to eliminate an occupation to reduce its demand for labor. If a company can perform the same amount of work with seven people instead of ten, the economic effect on the other three is real.</p><div class="pulse">Previous automation often pushed workers toward cognitive and service work. AI may now be following them there.</div>';
+      concernHeading.insertAdjacentElement('beforebegin',section);
+    }
+  }
+
+  // Articles directory: make the flagship and demand-side cards equally explicit.
+  if(path==='/articles.html'||path==='/articles'){
+    replaceText('.card p','What happens when the technology that makes production extraordinarily efficient also weakens the labor income people use to buy what it produces?','What happens when technology makes goods and services extraordinarily efficient to produce and deliver, while also weakening the labor income people use to buy them?');
+    replaceText('.card p','What happens when the economy becomes extraordinarily good at making things, but increasingly weak at distributing the purchasing power needed to buy them?','What happens when the economy becomes extraordinarily good at producing goods and delivering services, but increasingly weak at distributing the purchasing power needed to buy them?');
+  }
+
+  // Render one current site version across pages touched by the shared script.
+  document.querySelectorAll('.version,.workflow-version').forEach(el=>{el.textContent='SITE V1.15';});
 
   const nav=document.querySelector('header nav');
   if(!nav||document.querySelector('.poa-translate')) return;
