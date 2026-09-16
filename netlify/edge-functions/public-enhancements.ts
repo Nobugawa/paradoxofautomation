@@ -1,7 +1,6 @@
 export default async (request: Request, context: any) => {
   const url = new URL(request.url);
 
-  // Keep the private editorial Knowledge Graph untouched.
   if (url.pathname.startsWith('/knowledge-graph')) {
     return context.next();
   }
@@ -15,8 +14,6 @@ export default async (request: Request, context: any) => {
 
   let html = await response.text();
 
-  // Clarify that this project's Paradox of Automation is distinct from
-  // Lisanne Bainbridge's 1983 paper, "Ironies of Automation."
   if (url.pathname === '/the-paradox-of-automation.html' || url.pathname === '/the-paradox-of-automation') {
     const notice = `
 <section aria-label="Terminology note" style="border-bottom:1px solid #c8c0b2;background:#ebe5d9;padding:22px 0;">
@@ -27,16 +24,16 @@ export default async (request: Request, context: any) => {
     </p>
   </div>
 </section>`;
-
     html = html.replace(/<article>/i, `${notice}\n<article>`);
   }
 
-  // Add the translation helper to public HTML pages that do not already include it.
   if (!html.includes('/translate.js')) {
-    html = html.replace(
-      /<\/body>/i,
-      '<script src="/translate.js?v=1" defer></script></body>'
-    );
+    html = html.replace(/<\/body>/i,'<script src="/translate.js?v=1" defer></script></body>');
+  }
+
+  // Load the AI-powered library search only on the Articles directory.
+  if ((url.pathname === '/articles.html' || url.pathname === '/articles') && !html.includes('/poa-ai-search.js')) {
+    html = html.replace(/<\/body>/i,'<script src="/poa-ai-search.js?v=1"></script></body>');
   }
 
   const headers = new Headers(response.headers);
