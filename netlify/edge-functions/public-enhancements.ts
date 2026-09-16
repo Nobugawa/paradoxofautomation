@@ -33,7 +33,7 @@ export default async (request: Request, context: any) => {
 
   // Load the AI-powered library search only on the Articles directory.
   if ((url.pathname === '/articles.html' || url.pathname === '/articles') && !html.includes('/poa-ai-search.js')) {
-    html = html.replace(/<\/body>/i,'<script src="/poa-ai-search.js?v=1"></script></body>');
+    html = html.replace(/<\/body>/i,'<script src="/poa-ai-search.js?v=2" defer></script></body>');
   }
 
   const headers = new Headers(response.headers);

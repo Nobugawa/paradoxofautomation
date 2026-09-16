@@ -8,6 +8,10 @@ path = "/articles.html"
 
 [[edge_functions]]
 function = "public-enhancements"
+path = "/articles"
+
+[[edge_functions]]
+function = "public-enhancements"
 path = "/technology-has-always-replaced-human-labor.html"
 
 [[edge_functions]]
