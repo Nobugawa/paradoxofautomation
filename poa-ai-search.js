@@ -15,7 +15,7 @@
   oldInput.replaceWith(input);
   document.querySelectorAll('.topic-row button').forEach(btn=>{const clone=btn.cloneNode(true);btn.replaceWith(clone);});
 
-  const setVersion=()=>document.querySelectorAll('.version,.workflow-version').forEach(el=>el.textContent='SITE V1.18');
+  const setVersion=()=>document.querySelectorAll('.version,.workflow-version').forEach(el=>el.textContent='SITE V1.19');
   setVersion();
   setTimeout(setVersion,0);
   window.addEventListener('load',setVersion,{once:true});
@@ -28,8 +28,30 @@
   let activeTopic='all';
 
   const style=document.createElement('style');
-  style.textContent=`.poa-ai-status{margin:-8px 0 20px;padding:13px 15px;border-left:4px solid #d64b2a;background:#fffdf8;color:#393630;font-size:.9rem;line-height:1.5}.poa-ai-status strong{color:#0e0f11}.poa-ai-reason{display:block;margin:-6px 0 17px;padding:10px 12px;border-left:3px solid #d64b2a;background:#f4f0e7;color:#4f4a42;font-size:.79rem;line-height:1.45}.poa-ai-badge{display:inline-block;margin-right:7px;font:800 .66rem/1 system-ui;text-transform:uppercase;letter-spacing:.08em;color:#9f3118}`;
+  style.textContent=`
+    .poa-ai-status{margin:-8px 0 20px;padding:13px 15px;border-left:4px solid #d64b2a;background:#fffdf8;color:#393630;font-size:.9rem;line-height:1.5}
+    .poa-ai-status strong{color:#0e0f11}
+    .poa-ai-status a{color:#9f3118;font-weight:800}
+    .poa-ai-reason{display:block;margin:-6px 0 17px;padding:10px 12px;border-left:3px solid #d64b2a;background:#f4f0e7;color:#4f4a42;font-size:.79rem;line-height:1.45}
+    .poa-ai-badge{display:inline-block;margin-right:7px;font:800 .66rem/1 system-ui;text-transform:uppercase;letter-spacing:.08em;color:#9f3118}
+    .searchbox:after{display:none!important}
+    .poa-search-button{position:absolute;right:1px;top:1px;bottom:1px;width:46px;border:0;background:transparent;color:#5f5a52;font-size:1.25rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .poa-search-button:hover,.poa-search-button:focus-visible{background:#ebe5d9;color:#0e0f11;outline:2px solid #0e0f11;outline-offset:-2px}
+  `;
   document.head.appendChild(style);
+
+  const searchbox=input.closest('.searchbox');
+  let searchButton=null;
+  if(searchbox){
+    searchbox.style.position='relative';
+    searchButton=document.createElement('button');
+    searchButton.type='button';
+    searchButton.className='poa-search-button';
+    searchButton.setAttribute('aria-label','Search POA');
+    searchButton.title='Search POA';
+    searchButton.textContent='⌕';
+    searchbox.appendChild(searchButton);
+  }
 
   let statusBox=document.querySelector('.poa-ai-status');
   if(!statusBox){statusBox=document.createElement('div');statusBox.className='poa-ai-status';statusBox.hidden=true;note.insertAdjacentElement('afterend',statusBox);}
@@ -87,24 +109,32 @@
   };
 
   let timer=null,controller=null,last='';
-  async function run(){
+  async function run(force=false){
     const q=input.value.trim();
     if(!q){last='';resetCards();return;}
     if(q.length<3)return;
-    if(q===last)return;
+    if(q===last&&!force)return;
     last=q;
     if(controller)controller.abort();controller=new AbortController();
     note.textContent='AI is interpreting your question…';statusBox.hidden=true;if(sort)sort.disabled=true;
     try{
       const res=await fetch('/.netlify/functions/poa-search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({q}),signal:controller.signal});
       const data=await res.json();if(!res.ok)throw new Error(data.error||'Search failed');if(input.value.trim()!==q)return;showResult(data,q);
-    }catch(err){if(err.name==='AbortError')return;resetCards();statusBox.hidden=false;statusBox.innerHTML='<strong>AI search is not available yet.</strong> Add the Netlify environment variable <code>OPENAI_API_KEY</code> to enable it.';note.textContent='Browse the POA library';}
+    }catch(err){
+      if(err.name==='AbortError')return;
+      resetCards();
+      statusBox.hidden=false;
+      statusBox.innerHTML='<strong>There is an issue with search.</strong> Please contact <a href="mailto:hello@paradoxofautomation.com">hello@paradoxofautomation.com</a>.';
+      note.textContent='Browse the POA library';
+    }
   }
 
-  input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(run,450);});
+  input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>run(false),450);});
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();clearTimeout(timer);last='';run(true);}});
+  if(searchButton)searchButton.addEventListener('click',()=>{clearTimeout(timer);last='';run(true);});
   if(sort)sort.addEventListener('change',()=>{if(!input.value.trim())resetCards();});
   document.querySelectorAll('.topic-row button').forEach(btn=>btn.addEventListener('click',()=>{
-    document.querySelectorAll('.topic-row button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeTopic=btn.dataset.topic||'all';last='';input.value.trim()?run():resetCards();
+    document.querySelectorAll('.topic-row button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeTopic=btn.dataset.topic||'all';last='';input.value.trim()?run(true):resetCards();
   }));
   input.placeholder='Ask POA a question in plain English…';
   const help=document.querySelector('.search-help');if(help)help.innerHTML='<strong>Ask POA naturally.</strong> AI checks whether the published library actually covers your question. If it does not, it will say so rather than stretching weak matches.';
