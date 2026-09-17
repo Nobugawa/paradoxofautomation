@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POA Evidence Tracker | Paradox of Automation</title>
+<meta name="description" content="A living record of observed developments, emerging signals, research and policy evidence related to AI, automation, labor displacement and the Paradox of Automation." />
+<link rel="canonical" href="https://paradoxofautomation.com/evidence.html" />
+<meta name="theme-color" content="#0e0f11" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<style>
+:root{--paper:#f4f0e7;--ink:#0e0f11;--muted:#666158;--line:#c8c0b2;--signal:#d64b2a;--signal-dark:#9f3118;--white:#fffdf8;--max:1160px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(244,240,231,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,15,17,.16)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:block;line-height:0;flex:0 1 520px}.brand img{display:block;width:min(100%,520px);max-height:68px;object-fit:contain;object-position:left center}nav{display:flex;gap:18px;align-items:center;font-size:.86rem}nav a{text-decoration:none}.current{font-weight:800}.subscribe{background:var(--ink);color:var(--paper);padding:8px 13px;font-weight:800}
+.hero{padding:68px 0 48px;border-bottom:1px solid var(--line)}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:900;color:var(--signal-dark);margin-bottom:14px}h1{font:700 clamp(3.1rem,7vw,6.5rem)/.94 Georgia,"Times New Roman",serif;letter-spacing:-.05em;margin:0 0 22px}.deck{max-width:870px;font:1.28rem/1.58 Georgia,"Times New Roman",serif;color:#393630;margin:0 0 20px}.method{max-width:900px;color:var(--muted);font-size:.91rem}.method strong{color:var(--ink)}
+.legend{padding:24px 0;border-bottom:1px solid var(--line);background:#ebe5d9}.legend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.legend-item{background:var(--white);border:1px solid var(--line);padding:15px}.legend-item b{display:block;font-size:.77rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}.legend-item span{font-size:.78rem;color:var(--muted)}
+.controls{padding:38px 0 18px}.search{display:grid;grid-template-columns:1.4fr .6fr;gap:10px;margin-bottom:14px}.search input,.search select{width:100%;border:1px solid var(--ink);background:var(--white);padding:13px 14px;font:600 .94rem system-ui;border-radius:0}.topic-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:18px}.topic{border:1px solid var(--line);background:transparent;padding:12px 9px;text-align:left;cursor:pointer;min-height:84px}.topic:hover,.topic.active{border-color:var(--ink);background:var(--ink);color:var(--paper)}.topic .mark{display:block;font:900 1.05rem/1 system-ui;margin-bottom:13px}.topic .label{display:block;font:800 .72rem/1.2 system-ui;text-transform:uppercase;letter-spacing:.05em}.results-note{font-size:.83rem;color:var(--muted);margin:0 0 18px}.results-note strong{color:var(--ink)}
+.entries{display:grid;gap:14px;padding-bottom:60px}.entry{background:var(--white);border:1px solid var(--line);padding:26px;display:grid;grid-template-columns:170px 1fr;gap:26px}.entry-side{border-right:1px solid var(--line);padding-right:20px}.date{font:800 .73rem/1.3 system-ui;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px}.level{display:inline-block;padding:6px 8px;border:1px solid var(--ink);font:900 .69rem/1 system-ui;text-transform:uppercase;letter-spacing:.05em}.observed .level{background:var(--ink);color:var(--paper)}.signal .level{border-color:var(--signal);color:var(--signal-dark)}.policy .level{border-color:#5a5d66}.research .level{border-color:#6c675d}.entry h2{font:700 clamp(1.55rem,3vw,2.25rem)/1.08 Georgia,serif;margin:0 0 12px;letter-spacing:-.02em}.summary{font:1.08rem/1.65 Georgia,serif;margin:0 0 18px}.blocks{display:grid;grid-template-columns:1fr 1fr;gap:10px}.block{background:#f4f0e7;border-top:3px solid var(--ink);padding:13px}.block.limit{border-top-color:var(--signal)}.block b{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}.block p{margin:0;font-size:.84rem;color:#4c4841}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 13px}.tag{border:1px solid var(--line);padding:4px 7px;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em}.source{font-size:.78rem;color:var(--muted)}.source a{color:var(--signal-dark);font-weight:800}.empty{display:none;border:1px dashed var(--line);padding:25px;background:rgba(255,255,255,.3);font:1.05rem/1.5 Georgia,serif;margin-bottom:60px}
+footer{background:#0e0f11;color:#928c82;padding:25px 0;font-size:.76rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#c8c2b6}.version{position:fixed;right:10px;bottom:8px;font:700 10px/1 ui-monospace,monospace;color:#746e64;background:rgba(244,240,231,.92);border:1px solid rgba(14,15,17,.15);padding:5px 7px}
+@media(max-width:900px){.topic-grid{grid-template-columns:repeat(3,1fr)}.entry{grid-template-columns:1fr}.entry-side{border-right:0;border-bottom:1px solid var(--line);padding:0 0 14px}.legend-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.nav{min-height:68px}.brand{max-width:250px}nav a:not(.subscribe){display:none}.search{grid-template-columns:1fr}.topic-grid{grid-template-columns:1fr 1fr}.blocks{grid-template-columns:1fr}.legend-grid{grid-template-columns:1fr}.version{position:static;display:block;width:max-content;margin:14px 20px 10px auto;background:transparent;color:#928c82;border-color:#343537}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="/"><img src="/media/poa-logo.png" alt="Paradox of Automation — The Human Equation" /></a><nav><a href="/">Home</a><a href="/articles.html">Articles</a><a class="current" href="/evidence.html">Evidence</a><a class="subscribe" href="/#subscribe">Subscribe</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Living record · Updated as evidence changes</div><h1>POA Evidence Tracker</h1><p class="deck">A running record of developments that bear on the Paradox of Automation—what has actually happened, what may be an early signal, what research shows, and what policymakers or companies are preparing for.</p><p class="method"><strong>The standard:</strong> evidence is not all the same. We separate observed events from emerging signals, exposure research and policy scenarios. Each entry says why it matters and, just as importantly, what it does <em>not</em> prove.</p></div></section>
+<section class="legend"><div class="wrap legend-grid"><div class="legend-item"><b>Observed development</b><span>A documented event, deployment or statement that has already occurred.</span></div><div class="legend-item"><b>Emerging signal</b><span>Evidence consistent with a hypothesis, but not enough to establish causation.</span></div><div class="legend-item"><b>Research exposure</b><span>Measured exposure or task evidence. Exposure is not the same as job loss.</span></div><div class="legend-item"><b>Policy signal</b><span>A proposal or preparedness action showing an institution considers a risk plausible enough to plan for.</span></div></div></section>
+<section class="controls"><div class="wrap"><div class="search"><input id="search" type="search" placeholder="Search evidence: junior analysts, robotaxis, wages, policy..." aria-label="Search evidence"><select id="level"><option value="all">All evidence levels</option><option value="observed">Observed development</option><option value="signal">Emerging signal</option><option value="research">Research exposure</option><option value="policy">Policy signal</option></select></div><div class="topic-grid" id="topics"></div><p class="results-note" id="note"></p><div class="entries" id="entries"></div><div class="empty" id="empty">No evidence entry matches those filters yet. That does not mean there is no evidence; it means nothing in the current POA tracker matches this combination.</div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Paradox of Automation · Philos Kim</span><span><a href="/articles.html">Articles</a> · <a href="/privacy.html">Privacy</a> · <a href="mailto:hello@paradoxofautomation.com">hello@paradoxofautomation.com</a></span></div></footer><div class="version">SITE V1.18</div>
+<script src="/evidence-data.js"></script>
+<script>
+(()=>{
+  const data=(window.POA_EVIDENCE||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
+  const entries=document.getElementById('entries'),topicsEl=document.getElementById('topics'),search=document.getElementById('search'),level=document.getElementById('level'),note=document.getElementById('note'),empty=document.getElementById('empty');
+  const topicNames={},counts={};
+  data.forEach(item=>item.topics.forEach((t,i)=>{topicNames[t]=item.topicLabels[i];counts[t]=(counts[t]||0)+1;}));
+  const preferred=['first-rung','cognitive-work','hiring-wages','robotaxis','physical-automation','transportation','corporate-adoption','policy-preparedness','global-labor'];
+  let active=new URLSearchParams(location.search).get('topic')||'all';
+  const marks={'all':'ALL','first-rung':'01','cognitive-work':'CW','hiring-wages':'HW','robotaxis':'RX','physical-automation':'PA','transportation':'TR','corporate-adoption':'CA','policy-preparedness':'PP','global-labor':'GL'};
+  const buttons=[['all','All evidence'],...preferred.filter(t=>topicNames[t]).map(t=>[t,topicNames[t]])];
+  buttons.forEach(([key,label])=>{const b=document.createElement('button');b.type='button';b.className='topic'+(key===active?' active':'');b.dataset.topic=key;b.innerHTML='<span class="mark">'+(marks[key]||'•')+'</span><span class="label">'+label+(key==='all'?'':' · '+counts[key])+'</span>';b.addEventListener('click',()=>{active=key;document.querySelectorAll('.topic').forEach(x=>x.classList.remove('active'));b.classList.add('active');const u=new URL(location.href);if(key==='all')u.searchParams.delete('topic');else u.searchParams.set('topic',key);history.replaceState({},'',u);render();});topicsEl.appendChild(b);});
+  const esc=s=>(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  function render(){
+    const q=search.value.trim().toLowerCase();
+    const lev=level.value;
+    const shown=data.filter(item=>{
+      const topicOK=active==='all'||item.topics.includes(active);
+      const levelOK=lev==='all'||item.level===lev;
+      const hay=[item.title,item.summary,item.why,item.limits,item.source,...item.topicLabels].join(' ').toLowerCase();
+      const queryOK=!q||q.split(/\s+/).every(w=>hay.includes(w));
+      return topicOK&&levelOK&&queryOK;
+    });
+    entries.innerHTML='';
+    shown.forEach(item=>{
+      const el=document.createElement('article');el.className='entry '+item.level;
+      el.innerHTML='<aside class="entry-side"><div class="date">'+fmt(item.date)+'</div><span class="level">'+esc(item.levelLabel)+'</span></aside><div><h2>'+esc(item.title)+'</h2><p class="summary">'+esc(item.summary)+'</p><div class="blocks"><div class="block"><b>Why it matters</b><p>'+esc(item.why)+'</p></div><div class="block limit"><b>What it does not prove</b><p>'+esc(item.limits)+'</p></div></div><div class="tags">'+item.topicLabels.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div><div class="source"><strong>'+esc(item.sourceType)+':</strong> <a href="'+esc(item.url)+'" target="_blank" rel="noopener">'+esc(item.source)+' ↗</a></div></div>';
+      entries.appendChild(el);
+    });
+    note.innerHTML='<strong>'+shown.length+'</strong> of '+data.length+' evidence entr'+(data.length===1?'y':'ies')+(active!=='all'?' in '+esc(topicNames[active]||active):'')+'.';
+    empty.style.display=shown.length?'none':'block';
+  }
+  search.addEventListener('input',render);level.addEventListener('change',render);render();
+})();
+</script>
+<script src="/translate.js?v=3" defer></script>
+</body></html>
