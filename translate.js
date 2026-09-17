@@ -131,11 +131,43 @@
     replaceText('.card p','What happens when the economy becomes extraordinarily good at making things, but increasingly weak at distributing the purchasing power needed to buy them?','What happens when the economy becomes extraordinarily good at producing goods and delivering services, but increasingly weak at distributing the purchasing power needed to buy them?');
   }
 
+  // Link relevant articles to the living Evidence Tracker without duplicating the evidence.
+  const evidenceTopics={
+    '/the-missing-first-rung.html':['first-rung','The Missing First Rung'],
+    '/the-missing-first-rung':['first-rung','The Missing First Rung'],
+    '/previous-automation-pushed-workers-somewhere-else.html':['cognitive-work','cognitive work and labor displacement'],
+    '/previous-automation-pushed-workers-somewhere-else':['cognitive-work','cognitive work and labor displacement'],
+    '/why-nobody-will-hit-the-brakes-on-ai.html':['policy-preparedness','policy and preparedness'],
+    '/why-nobody-will-hit-the-brakes-on-ai':['policy-preparedness','policy and preparedness'],
+    '/we-saw-the-automation-risk-60-years-ago.html':['policy-preparedness','policy and preparedness'],
+    '/we-saw-the-automation-risk-60-years-ago':['policy-preparedness','policy and preparedness']
+  };
+  const evidenceTopic=evidenceTopics[path];
+  if(evidenceTopic&&!document.querySelector('.poa-evidence-cta')){
+    const evidenceStyle=document.createElement('style');
+    evidenceStyle.textContent='.poa-evidence-cta{width:min(calc(100% - 40px),760px);margin:0 auto 58px;border-top:4px solid var(--ink);border-bottom:1px solid var(--line);padding:22px 0 24px}.poa-evidence-cta small{display:block;font:900 .7rem/1 system-ui;text-transform:uppercase;letter-spacing:.12em;color:var(--signal-dark,#9f3118);margin-bottom:8px}.poa-evidence-cta p{margin:0 0 14px!important;font:1.08rem/1.55 Georgia,serif!important}.poa-evidence-cta a{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;padding:10px 13px;font:800 .8rem/1.2 system-ui}';
+    document.head.appendChild(evidenceStyle);
+    const cta=document.createElement('section');
+    cta.className='poa-evidence-cta';
+    cta.innerHTML='<small>Living evidence</small><p>The article makes the argument. The Evidence Tracker keeps the record current as new developments appear.</p><a href="/evidence.html?topic='+encodeURIComponent(evidenceTopic[0])+'">View current evidence for '+evidenceTopic[1]+' →</a>';
+    const anchor=document.querySelector('.explore,.newsletter,.ending');
+    if(anchor) anchor.insertAdjacentElement('beforebegin',cta); else document.querySelector('main')?.appendChild(cta);
+  }
+
   // Render one current site version across pages touched by the shared script.
-  document.querySelectorAll('.version,.workflow-version').forEach(el=>{el.textContent='SITE V1.15';});
+  document.querySelectorAll('.version,.workflow-version').forEach(el=>{el.textContent='SITE V1.19';});
 
   const nav=document.querySelector('header nav');
   if(!nav||document.querySelector('.poa-translate')) return;
+
+  if(!nav.querySelector('a[href="/evidence.html"]')){
+    const evidenceLink=document.createElement('a');
+    evidenceLink.href='/evidence.html';
+    evidenceLink.textContent='Evidence';
+    evidenceLink.className='poa-evidence-nav';
+    const subscribeLink=nav.querySelector('.subscribe,.subscribe-link');
+    if(subscribeLink) nav.insertBefore(evidenceLink,subscribeLink); else nav.appendChild(evidenceLink);
+  }
 
   const langs=[['es','Español'],['fr','Français'],['de','Deutsch'],['pt','Português'],['it','Italiano'],['zh-CN','中文'],['ja','日本語'],['ko','한국어'],['ar','العربية'],['hi','हिन्दी'],['ru','Русский']];
 
@@ -163,7 +195,7 @@
 
   const mobileMenu=document.createElement('div');
   mobileMenu.className='poa-mobile-menu';
-  mobileMenu.innerHTML='<button class="poa-menu-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Open site menu">☰</button><div class="poa-menu-panel"><a href="/articles.html">Articles</a><a href="/#about">About</a><a href="/#subscribe">Subscribe</a></div>';
+  mobileMenu.innerHTML='<button class="poa-menu-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Open site menu">☰</button><div class="poa-menu-panel"><a href="/articles.html">Articles</a><a href="/evidence.html">Evidence</a><a href="/#about">About</a><a href="/#subscribe">Subscribe</a></div>';
   nav.appendChild(mobileMenu);
 
   const grid=wrap.querySelector('.poa-translate-grid');
